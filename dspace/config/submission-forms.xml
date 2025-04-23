@@ -143,7 +143,7 @@
                     <dc-qualifier>issued</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Data</label>
-                    <style>col-sm-4</style>
+                    <style>col-sm-3</style>
                     <input-type>date</input-type>
                     <hint>Insira a data da webconferência</hint>
                     <required>Campo obrigatório.</required>
@@ -159,6 +159,9 @@
                     <required>Campo obrigatório.</required>
                 </field>
 
+            </row>
+            <row>
+
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>identifier</dc-element>
@@ -169,7 +172,6 @@
                     <hint>Insira o nome do expositor(a) e a descrição</hint>
                     <required>Campo obrigatório.</required>
                 </field>
-
             </row>
         </form>
 
