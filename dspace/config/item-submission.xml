@@ -85,6 +85,7 @@
         <name-map collection-handle="123456789/28" submission-name="SaoPaulo"/>
         <name-map collection-handle="123456789/21" submission-name="Tocantins"/>
         <name-map collection-handle="123456789/75" submission-name="Youtube"/>
+        <name-map collection-handle="123456789/74" submission-name="PDF"/>
 
 
 
@@ -503,6 +504,12 @@
         <submission-process name="Youtube">
             <step id="collection"/>
             <step id="youtube"/>
+        </submission-process>
+
+        <submission-process name="PDF">
+            <step id="collection"/>
+            <step id="contato"/>
+            <step id="upload"/>
         </submission-process>
 
 
