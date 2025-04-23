@@ -129,7 +129,7 @@
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>title</dc-element>
-                    <dc-qualifier></dc-qualifier>
+                    <dc-qualifier>alternative</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Webconferência</label>
                     <input-type>onebox</input-type>
@@ -137,6 +137,20 @@
                     <required>Campo obrigatório.</required>
                 </field>
 
+                <field>
+
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>abstract</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Descrição</label>
+                    <input-type>onebox</input-type>
+                    <hint>Insira uma descrição para o vídeo.</hint>
+                    <required>Campo obrigatório.</required>
+                </field>
+            </row>
+
+            <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>date</dc-element>
@@ -158,14 +172,12 @@
                     <hint>Link do YouTube</hint>
                     <required>Campo obrigatório.</required>
                 </field>
-
             </row>
             <row>
-
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>identifier</dc-element>
-                    <dc-qualifier></dc-qualifier>
+                    <dc-qualifier>other</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Nome do expositor(a)/Descrição</label>
                     <input-type>series</input-type>
@@ -1525,7 +1537,8 @@
                     <label>Resource Version</label>
                     <input-type value-pairs-name="openaire_version_types">dropdown</input-type>
                     <hint>Select the version of the resource. If the resource does not have that information, please
-                        select "Not Applicable (or Unknown)".</hint>
+                        select "Not Applicable (or Unknown)".
+                    </hint>
                     <required></required>
                 </field>
                 <field>
