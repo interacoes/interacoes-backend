@@ -84,6 +84,7 @@
         <name-map collection-handle="123456789/14" submission-name="Sergipe"/>
         <name-map collection-handle="123456789/28" submission-name="SaoPaulo"/>
         <name-map collection-handle="123456789/21" submission-name="Tocantins"/>
+        <name-map collection-handle="123456789/75" submission-name="Youtube"/>
 
 
 
@@ -152,6 +153,11 @@
         <!-- The following set of DescribeStep <step-definition>s all point to forms (of the same name) which are
              defined in submission-forms.xml -->
         <step-definition id="traditionalpageone" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+        <step-definition id="youtube" mandatory="true">
             <heading>submit.progressbar.describe.stepone</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
@@ -492,6 +498,11 @@
 
             <!--Step will be to Sign off on the required DSpace License agreement -->
             <step id="license"/>
+        </submission-process>
+
+        <submission-process name="Youtube">
+            <step id="collection"/>
+            <step id="youtube"/>
         </submission-process>
 
 
