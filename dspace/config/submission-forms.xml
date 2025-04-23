@@ -590,7 +590,7 @@
                     <repeatable>false</repeatable>
                     <label>Regulamentação</label>
                     <input-type>onebox</input-type>
-                    <hint>Não se aplica.</hint>
+                    <hint>Insira a regulamentação.</hint>
                     <required>Campo obrigatório.</required>
                 </field>
 
@@ -601,7 +601,7 @@
                     <repeatable>false</repeatable>
                     <label>Recursos Financeiros</label>
                     <input-type>onebox</input-type>
-                    <hint>Não se aplica.</hint>
+                    <hint>Insira os recursos financeiros.</hint>
                     <required>Campo obrigatório.</required>
                 </field>
 
@@ -612,7 +612,7 @@
                     <repeatable>false</repeatable>
                     <label>Fonte de Recursos</label>
                     <input-type>onebox</input-type>
-                    <hint>Não se aplica.</hint>
+                    <hint>Insira a fonte de recursos.</hint>
                     <required>Campo obrigatório.</required>
                 </field>
             </row>
