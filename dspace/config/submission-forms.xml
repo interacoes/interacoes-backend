@@ -123,6 +123,32 @@
                 </field>
             </row>
         </form>
+        <form name="pdf">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>title</dc-element>
+                    <dc-qualifier>alternative</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>PDF</label>
+                    <input-type>onebox</input-type>
+                    <hint>Insira o nome do pdf.</hint>
+                    <required>Campo obrigatório.</required>
+                </field>
+
+                <field>
+
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>abstract</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Descrição</label>
+                    <input-type>onebox</input-type>
+                    <hint>Insira uma descrição para o pdf.</hint>
+                    <required>Campo obrigatório.</required>
+                </field>
+            </row>
+        </form>
 
         <form name="youtube">
             <row>
@@ -142,7 +168,7 @@
                     <dc-schema>dc</dc-schema>
                     <dc-element>description</dc-element>
                     <dc-qualifier>abstract</dc-qualifier>
-                    <repeatable>true</repeatable>
+                    <repeatable>false</repeatable>
                     <label>Descrição</label>
                     <input-type>onebox</input-type>
                     <hint>Insira uma descrição para o vídeo.</hint>
@@ -170,6 +196,15 @@
                     <label>Link</label>
                     <input-type>onebox</input-type>
                     <hint>Link do YouTube</hint>
+                    <required>Campo obrigatório.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <label>Id Video</label>
+                    <input-type>onebox</input-type>
+                    <hint>Id do YouTube</hint>
                     <required>Campo obrigatório.</required>
                 </field>
             </row>
