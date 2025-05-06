@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - develop
-
 jobs:
   deploy:
     runs-on: [self-hosted, Linux, X64, dev-backend-runner]
