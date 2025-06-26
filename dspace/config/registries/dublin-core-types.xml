@@ -654,4 +654,24 @@
     <qualifier>email</qualifier>
     <scope_note></scope_note>
   </dc-type>
+  <dc-type>
+    <schema>dc</schema>
+    <element>date</element>
+    <qualifier>start</qualifier>
+  </dc-type>
+  <dc-type>
+    <schema>dc</schema>
+    <element>date</element>
+    <qualifier>end</qualifier>
+  </dc-type>
+  <dc-type>
+    <schema>dc</schema>
+    <element>title</element>
+    <qualifier>event</qualifier>
+  </dc-type>
+  <dc-type>
+    <schema>dc</schema>
+    <element>description</element>
+    <qualifier>event</qualifier>
+  </dc-type>
 </dspace-dc-types>

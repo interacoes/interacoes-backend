@@ -138,33 +138,65 @@
             </row>
 
         </form>
-        <form name="pdf">
+        <form name="evento">
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>title</dc-element>
-                    <dc-qualifier></dc-qualifier>
+                    <dc-qualifier>event</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>PDF</label>
+                    <label>Evento</label>
                     <input-type>onebox</input-type>
-                    <hint>Insira o nome do pdf.</hint>
+                    <hint>Insira o nome do evento.</hint>
                     <required>Campo obrigatório.</required>
                 </field>
-
                 <field>
-
                     <dc-schema>dc</dc-schema>
                     <dc-element>description</dc-element>
-                    <dc-qualifier></dc-qualifier>
+                    <dc-qualifier>event</dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Descrição</label>
+                    <input-type>textarea</input-type>
+                    <hint>Insira uma descrição para o evento.</hint>
+                    <required>Campo obrigatório.</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>coverage</dc-element>
+                    <dc-qualifier>spatial</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Municipio</label>
                     <input-type>onebox</input-type>
-                    <hint>Insira uma descrição para o pdf.</hint>
+                    <hint>Selecione o municío do evento.</hint>
+                    <required>Campo obrigatório.</required>
+                    <vocabulary>municipio</vocabulary>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>start</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Data de início</label>
+                    <style>col-sm-3</style>
+                    <input-type>date</input-type>
+                    <hint>Insira a data de início</hint>
+                    <required>Campo obrigatório.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>end</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Data de fim</label>
+                    <style>col-sm-3</style>
+                    <input-type>date</input-type>
+                    <hint>Insira a data de fim</hint>
                     <required>Campo obrigatório.</required>
                 </field>
             </row>
         </form>
-
         <form name="youtube">
             <row>
                 <field>

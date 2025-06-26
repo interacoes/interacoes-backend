@@ -58,7 +58,7 @@
         -->
         <name-map collection-handle="123456789/2" submission-name="Acao"/>
         <name-map collection-handle="123456789/3" submission-name="Youtube"/>
-        <name-map collection-handle="123456789/4" submission-name="PDF"/>
+        <name-map collection-handle="123456789/4" submission-name="Evento"/>
 
 
 
@@ -136,7 +136,7 @@
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
-        <step-definition id="pdf" mandatory="true">
+        <step-definition id="evento" mandatory="true">
             <heading>submit.progressbar.describe.stepone</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
@@ -355,9 +355,9 @@
             <step id="youtube"/>
         </submission-process>
 
-        <submission-process name="PDF">
+        <submission-process name="Evento">
             <step id="collection"/>
-            <step id="pdf"/>
+            <step id="evento"/>
             <step id="upload"/>
         </submission-process>
 
