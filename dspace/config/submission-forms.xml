@@ -267,6 +267,17 @@
                     <required>Campo obrigatório.</required>
                 </field>
             </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>illustrator</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Nome do expositor(a)/Lattes</label>
+                    <input-type>series</input-type>
+                    <hint>Insira o nome do expositor(a) e o link do lattes</hint>
+                </field>
+            </row>
         </form>
 
         <form name="regulamentacao">
