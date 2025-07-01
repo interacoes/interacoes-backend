@@ -3,7 +3,7 @@
     <isComposedBy>
         <node id="norte_id" label="Norte" selectable="false" >
                     <isComposedBy>
-                        <node id="ac_id" label="AC" selectable="false" >
+                        <node id="ac_id" label="Acre" selectable="false" >
                             <isComposedBy>
                                 <node id="ac_acrelandia_id" label="Acrelândia;-66.897166,-9.825808" />
                                 <node id="ac_assis_brasil_id" label="Assis Brasil;-69.573794,-10.929765"/>
@@ -29,7 +29,7 @@
                                 <node id="ac_xapuri_id" label="Xapuri;-68.496857,-10.651598" />
                             </isComposedBy>
                         </node>
-                        <node id="ap_id" label="AP" selectable="false" >
+                        <node id="ap_id" label="Amapá" selectable="false" >
                             <isComposedBy>
                                 <node id="ap_amapa_id" label="Amapá;-50.795653,2.052669" />
                                 <node id="ap_calcoene_id" label="Calçoene;-50.951233,2.504747" />
@@ -49,7 +49,7 @@
                                 <node id="ap_vitoria_do_jari_id" label="Vitória do Jari;-52.424001,-0.938" />
                             </isComposedBy>
                         </node>
-                        <node id="am_id" label="AM" selectable="false" >
+                        <node id="am_id" label="Amazonas" selectable="false" >
                             <isComposedBy>
                                 <node id="am_alvaraes_id" label="Alvarães;-64.800654,-3.22727" />
                                 <node id="am_amatura_id" label="Amaturá;-68.200456,-3.374547" />
@@ -115,7 +115,7 @@
                                 <node id="am_urucurituba_id" label="Urucurituba;-58.149637,-3.128412" />
                             </isComposedBy>
                         </node>
-                        <node id="pa_id" label="PA" selectable="false" >
+                        <node id="pa_id" label="Pará" selectable="false" >
                             <isComposedBy>
                                 <node id="pa_abaetetuba_id" label="Abaetetuba;-48.878843,-1.721828" />
                                 <node id="pa_abel_figueiredo_id" label="Abel Figueiredo;-48.393285,-4.953327" />
@@ -262,7 +262,7 @@
                                 <node id="pa_obidos_id" label="Óbidos;-55.520812,-1.901072" />
                             </isComposedBy>
                         </node>
-                        <node id="ro_id" label="RO" selectable="false" >
+                        <node id="ro_id" label="Rondônia" selectable="false" >
                             <isComposedBy>
                                 <node id="ro_alta_floresta_d`oeste_id" label="Alta Floresta d`Oeste;-61.995342,-11.928325" />
                                 <node id="ro_alto_alegre_dos_parecis_id" label="Alto Alegre dos Parecis;-61.834979,-12.131955" />
@@ -318,7 +318,7 @@
                                 <node id="ro_vilhena_id" label="Vilhena;-60.148847,-12.750183" />
                             </isComposedBy>
                         </node>
-                        <node id="rr_id" label="RR" selectable="false" >
+                        <node id="rr_id" label="Roraima" selectable="false" >
                             <isComposedBy>
                                 <node id="rr_alto_alegre_id" label="Alto Alegre;-61.307167,2.98858" />
                                 <node id="rr_amajari_id" label="Amajari;-61.369245,3.645714" />
@@ -337,7 +337,7 @@
                                 <node id="rr_uiramuta_id" label="Uiramutã;-60.181464,4.603144" />
                             </isComposedBy>
                         </node>
-                        <node id="to_id" label="TO" selectable="false" >
+                        <node id="to_id" label="Tocantins" selectable="false" >
                             <isComposedBy>
                                 <node id="to_abreulandia_id" label="Abreulândia;-49.151845,-9.621015" />
                                 <node id="to_aguiarnopolis_id" label="Aguiarnópolis;-47.470222,-6.554087" />
@@ -484,7 +484,7 @@
                 </node>
         <node id="nordeste_id" label="Nordeste" selectable="false" >
             <isComposedBy>
-                <node id="al_id" label="AL" selectable="false">
+                <node id="al_id" label="Alagoas" selectable="false">
                     <isComposedBy>
                         <node id="al_anadia_id" label="Anadia;-36.307783,-9.684886" />
                         <node id="al_arapiraca_id" label="Arapiraca;-36.661471,-9.754866" />
@@ -590,7 +590,7 @@
                         <node id="al_agua_branca_id" label="Água Branca;-37.937988,-9.261996" />
                     </isComposedBy>
                 </node>
-                <node id="ba_id" label="BA" selectable="false">>
+                <node id="ba_id" label="Bahia" selectable="false">>
                     <isComposedBy>
                         <node id="ba_abare_id" label="Abaré;-39.116178,-8.720734" />
                         <node id="ba_abaira_id" label="Abaíra;-41.661869,-13.24883" />
@@ -1011,7 +1011,7 @@
                         <node id="ba_erico_cardoso_id" label="Érico Cardoso;-42.1352,-13.421467" />
                     </isComposedBy>
                 </node>
-                <node id="ce_id" label="CE" selectable="false">>
+                <node id="ce_id" label="Ceará" selectable="false">>
                     <isComposedBy>
                         <node id="ce_abaiara_id" label="Abaiara;-39.04159,-7.345879" />
                         <node id="ce_acarape_id" label="Acarapé;-38.705532,-4.22083" />
@@ -1199,7 +1199,7 @@
                         <node id="ce_varzea_alegre_id" label="Várzea Alegre;-39.294155,-6.782642" />
                     </isComposedBy>
                 </node>
-                <node id="ma_id" label="MA" selectable="false">>
+                <node id="ma_id" label="Maranhão" selectable="false">>
                     <isComposedBy>
                         <node id="ma_afonso_cunha_id" label="Afonso Cunha;-43.327527,-4.136313" />
                         <node id="ma_alcantara_id" label="Alcântara;-44.406182,-2.395737" />
@@ -1420,7 +1420,7 @@
                         <node id="ma_agua_doce_do_maranhao_id" label="Água Doce do Maranhão;-42.118903,-2.840479" />
                     </isComposedBy>
                 </node>
-                <node id="pb_id" label="PB" selectable="false">
+                <node id="pb_id" label="Paraíba" selectable="false">
                     <isComposedBy>
                         <node id="pb_aguiar_id" label="Aguiar;-38.168059,-7.091802" />
                         <node id="pb_alagoa_grande_id" label="Alagoa Grande;-35.620609,-7.039432" />
@@ -1647,7 +1647,7 @@
                         <node id="pb_agua_branca_id" label="Água Branca;-37.635703,-7.511441" />
                     </isComposedBy>
                 </node>
-                <node id="pe_id" label="PE" selectable="false">>
+                <node id="pe_id" label="Pernambuco" selectable="false">>
                     <isComposedBy>
                         <node id="pe_abreu_e_lima_id" label="Abreu e Lima;-34.898389,-7.900719" />
                         <node id="pe_afogados_da_ingazeira_id" label="Afogados da Ingazeira;-37.630991,-7.743121" />
@@ -1836,7 +1836,7 @@
                         <node id="pe_aguas_belas_id" label="Águas Belas;-37.122619,-9.111255" />
                     </isComposedBy>
                 </node>
-                <node id="pi_id" label="PI" selectable="false">>
+                <node id="pi_id" label="Piauí" selectable="false">>
                     <isComposedBy>
                         <node id="pi_acaua_id" label="Acauã;-41.083059,-8.219542" />
                         <node id="pi_agricolandia_id" label="Agricolândia;-42.666371,-5.796763" />
@@ -2064,7 +2064,7 @@
                         <node id="pi_agua_branca_id" label="Água Branca;-42.636961,-5.888564" />
                     </isComposedBy>
                 </node>
-                <node id="rn_id" label="RN" selectable="false">>
+                <node id="rn_id" label="Rio Grande do Norte" selectable="false">>
                     <isComposedBy>
                         <node id="rn_acari_id" label="Acari;-36.634719,-6.428201" />
                         <node id="rn_afonso_bezerra_id" label="Afonso Bezerra;-36.507469,-5.492294" />
@@ -2235,7 +2235,7 @@
                         <node id="rn_agua_nova_id" label="Água Nova;-38.29414,-6.203514" />
                     </isComposedBy>
                 </node>
-                <node id="se_id" label="SE" selectable="false">>
+                <node id="se_id" label="Sergipe" selectable="false">>
                     <isComposedBy>
                         <node id="se_amparo_de_sao_francisco_id" label="Amparo de São Francisco;-36.934993,-10.134842" />
                         <node id="se_aquidaba_id" label="Aquidabã;-37.014768,-10.278043" />
@@ -2320,7 +2320,7 @@
         </node>
         <node id="centro_oeste_id" label="Centro-Oeste" selectable="false">
             <isComposedBy>
-                <node id="df_id" label="DF" selectable="false">
+                <node id="df_id" label="Distrito Federal" selectable="false">
                     <isComposedBy>
                         <node id="df_brasilia_id" label="Brasília;-47.929657,-15.779522" />
                         <node id="df_brazlandia_id" label="Brazlândia;-48.1200592,-15.6103503" />
@@ -2343,7 +2343,7 @@
                         <node id="df_taguatinga_id" label="Taguatinga;-48.0323,-15.5" />
                     </isComposedBy>
                 </node>
-                <node id="go_id" label="GO" selectable="false">
+                <node id="go_id" label="Goiás" selectable="false">
                     <isComposedBy>
                         <node id="go_abadia_de_goias_id" label="Abadia de Goiás;-49.441156,-16.757326" />
                         <node id="go_abadiania_id" label="Abadiânia;-48.705672,-16.196973" />
@@ -2593,7 +2593,7 @@
                         <node id="go_aguas_lindas_de_goias_id" label="Águas Lindas de Goiás;-48.281611,-15.761746" />
                     </isComposedBy>
                 </node>
-                <node id="mt_id" label="MT" selectable="false">
+                <node id="mt_id" label="Mato Grosso" selectable="false">
                     <isComposedBy>
                         <node id="mt_acorizal_id" label="Acorizal;-56.363226,-15.194025" />
                         <node id="mt_alta_floresta_id" label="Alta Floresta;-56.086704,-9.866745" />
@@ -2738,7 +2738,7 @@
                         <node id="mt_agua_boa_id" label="Água Boa;-52.160133,-14.051019" />
                     </isComposedBy>
                 </node>
-                <node id="ms_id" label="MS" selectable="false">
+                <node id="ms_id" label="Mato Grosso do Sul" selectable="false">
                     <isComposedBy>
                         <node id="ms_alcinopolis_id" label="Alcinópolis;-53.704223,-18.325546" />
                         <node id="ms_amambai_id" label="Amambaí;-55.225327,-23.10576" />
@@ -2825,7 +2825,7 @@
         </node>
         <node id="sudeste_id" label="Sudeste" selectable="false">
             <isComposedBy>
-                <node id="es_id" label="ES" selectable="false">
+                <node id="es_id" label="Espírito Santo" selectable="false">
                     <isComposedBy>
                         <node id="es_afonso_claudio_id" label="Afonso Cláudio;-41.12606,-20.077841" />
                         <node id="es_alegre_id" label="Alegre;-41.538237,-20.758041" />
@@ -2907,7 +2907,7 @@
                         <node id="es_aguia_branca_id" label="Águia Branca;-40.74369,-18.984588" />
                     </isComposedBy>
                 </node>
-                <node id="mg_id" label="MG" selectable="false">
+                <node id="mg_id" label="Minas Gerais" selectable="false">
                     <isComposedBy>
                         <node id="mg_abadia_dos_dourados_id" label="Abadia dos Dourados;-47.391623,-18.483101" />
                         <node id="mg_abaete_id" label="Abaeté;-45.444413,-19.155125" />
@@ -3764,7 +3764,7 @@
                         <node id="mg_aguas_vermelhas_id" label="Águas Vermelhas;-41.457127,-15.743057" />
                     </isComposedBy>
                 </node>
-                <node id="rj_id" label="RJ" selectable="false">
+                <node id="rj_id" label="Rio de Janeiro" selectable="false">
                     <isComposedBy>
                         <node id="rj_angra_dos_reis_id" label="Angra dos Reis;-44.31956,-23.001074" />
                         <node id="rj_aperibe_id" label="Aperibé;-42.101661,-21.625231" />
@@ -3860,7 +3860,7 @@
                         <node id="rj_volta_redonda_id" label="Volta Redonda;-44.099555,-22.520212" />
                     </isComposedBy>
                 </node>
-                <node id="sp_id" label="SP" selectable="false">
+                <node id="sp_id" label="São Paulo" selectable="false">
                     <isComposedBy>
                         <node id="sp_adamantina_id" label="Adamantina;-51.073695,-21.682012" />
                         <node id="sp_adolfo_id" label="Adolfo;-49.645128,-21.232494" />
@@ -4514,7 +4514,7 @@
         </node>
         <node id="sul_id" label="Sul" selectable="false">
             <isComposedBy>
-                <node id="pr_id" label="PR" selectable="false">
+                <node id="pr_id" label="Paraná" selectable="false">
                     <isComposedBy>
                         <node id="pr_abatia_id" label="Abatiá;-50.313281,-23.304863" />
                         <node id="pr_adrianopolis_id" label="Adrianópolis;-48.992164,-24.660607" />
@@ -4917,7 +4917,7 @@
                         <node id="pr_angulo_id" label="Ângulo;-51.915356,-23.194609" />
                     </isComposedBy>
                 </node>
-                <node id="rs_id" label="RS" selectable="false">
+                <node id="rs_id" label="Rio Grande do Sul" selectable="false">
                     <isComposedBy>
                         <node id="rs_acegua_id" label="Aceguá;-54.161467,-31.866483" />
                         <node id="rs_agudo_id" label="Agudo;-53.251458,-29.644743" />
@@ -5417,7 +5417,7 @@
                         <node id="rs_aurea_id" label="Áurea;-52.050506,-27.693586" />
                     </isComposedBy>
                 </node>
-                <node id="sc_id" label="SC" selectable="false">
+                <node id="sc_id" label="Santa Catarina" selectable="false">
                     <isComposedBy>
                         <node id="sc_abdon_batista_id" label="Abdon Batista;-51.023275,-27.612628" />
                         <node id="sc_abelardo_luz_id" label="Abelardo Luz;-52.322881,-26.571585" />
