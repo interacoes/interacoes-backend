@@ -1,4 +1,3 @@
-# docker-compose.pgadmin.yml
 services:
   pgadmin:
     image: dpage/pgadmin4:latest
@@ -7,10 +6,14 @@ services:
     environment:
       PGADMIN_DEFAULT_EMAIL: interacoes@ltap.ifce.edu.br
       PGADMIN_DEFAULT_PASSWORD: ltapmaracanau2025
+      PGADMIN_CONFIG_SERVER_MODE: 'True'
+      PGADMIN_CONFIG_ENHANCED_COOKIE_PROTECTION: 'False'
+      PGADMIN_CONFIG_FORCE_SSL: 'True'
+
     ports:
-      - "8081:80"
+      - "8060:80"
     networks:
       - dspacenet
-    depends_on:
-      - dspacedb
 
+networks:
+  dspacenet:
