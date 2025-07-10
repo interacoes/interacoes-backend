@@ -18,7 +18,7 @@ jobs:
 
       - name: Build dos containers
         run: |
-          docker compose -f docker-compose.yml -f docker-compose-cli.yml build
+          docker compose -f docker-compose.yml -f docker-compose-cli.yml -f docker-compose-pgadmin.yml build
 
       - name: Subir os containers com Docker Compose
         run: |
