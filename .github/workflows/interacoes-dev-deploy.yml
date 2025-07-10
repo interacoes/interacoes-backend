@@ -22,4 +22,8 @@ jobs:
 
       - name: Subir os containers com Docker Compose
         run: |
-          docker compose -p d8 up -d
+          docker compose -p d8 \
+            -f docker-compose.yml \
+            -f docker-compose-cli.yml \
+            -f docker-compose-pgadmin.yml \
+            up -d
