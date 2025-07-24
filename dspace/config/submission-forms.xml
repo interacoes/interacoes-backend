@@ -143,7 +143,7 @@
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>title</dc-element>
-                    <dc-qualifier>event</dc-qualifier>
+                    <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
                     <label>Evento</label>
                     <input-type>onebox</input-type>
