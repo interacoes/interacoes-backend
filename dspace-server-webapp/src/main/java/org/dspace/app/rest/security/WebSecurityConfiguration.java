@@ -172,8 +172,8 @@ public class WebSecurityConfiguration {
             .addFilterBefore(new StatelessAuthenticationFilter(authenticationManager, restAuthenticationService,
                                                                ePersonRestAuthenticationProvider, requestService),
                              StatelessLoginFilter.class)
-        //teste
-            .headers(headers -> headers.frameOptions(frameOptions -> frameOptions.sameOrigin()));
+            //remoção do frame options
+            .headers(headers -> headers.frameOptions(frameOptions -> frameOptions.disable()));
         return http.build();
     }
 
