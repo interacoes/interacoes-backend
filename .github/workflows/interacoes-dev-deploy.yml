@@ -1,9 +1,12 @@
 name: Deploy Backend (DSpace) - Branch develop [20-08-2025 02]
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - develop
+
+      
 jobs:
   deploy:
     runs-on: [self-hosted, Linux, X64, dev-backend-runner]
