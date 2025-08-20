@@ -76,6 +76,7 @@ services:
     volumes:
     # Keep Postgres data directory between reboots
     - pgdata:/pgdata
+    cpus: 0.5
   # DSpace Solr container
   dspacesolr:
     container_name: dspacesolr
