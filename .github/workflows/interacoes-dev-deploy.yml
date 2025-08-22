@@ -1,4 +1,4 @@
-name: Deploy Backend (DSpace) - Branch develop [20-08-2025 02]
+name: Deploy Backend (DSpace) - Branch develop
 
 on:
   workflow_dispatch:
@@ -23,9 +23,11 @@ jobs:
         run: |
           docker compose -f docker-compose.yml -f docker-compose-cli.yml -f docker-compose-pgadmin.yml build
 
-      - name: Subir os containers com Docker Compose
+      - name: Subir os containers principais
         run: |
-          docker compose -p d8 \
-            -f docker-compose.yml \
-            -f docker-compose-cli.yml \
-            up -d
+          docker compose -p d8 -f docker-compose.yml up -d
+          
+      - name: Subir os containers de comandos - cli
+        run: |
+          docker compose -p d8 -f docker-compose-cli.yml up -d
+
