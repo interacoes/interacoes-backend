@@ -13,17 +13,27 @@ jobs:
       JAVA_VERSION: '17'
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Java and Maven
+      - name: Setup Java
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: ${{ env.JAVA_VERSION }}
           cache: maven
-          components: 'maven'
+
+      - name: Install Maven
+        run: sudo apt-get update && sudo apt-get install -y maven
+
+      - name: Install Ant
+        run: sudo apt-get install -y ant
 
       - name: Build with Maven
         run: mvn package -B
+
+      - name: Fresh Install DSpace (ant fresh_install)
+        run: |
+          cd dspace/target/dspace-installer
+          ant fresh_install
 
