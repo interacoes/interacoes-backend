@@ -12,22 +12,14 @@ jobs:
     runs-on: [self-hosted, Linux, X64, dev-backend-runner]
 
     steps:
-      - name: Checkout do código
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Derrubar containers e remover imagens antigas (preservando volumes)
-        run: |
-          docker compose -p d8 down --rmi all --remove-orphans
-
-      - name: Build dos containers
-        run: |
-          docker compose -f docker-compose.yml -f docker-compose-cli.yml -f docker-compose-pgadmin.yml build
-
-      - name: Subir os containers principais
-        run: |
-          docker compose -p d8 -f docker-compose.yml up -d
-          
-      - name: Subir os containers de comandos - cli
-        run: |
-          docker compose -p d8 -f docker-compose-cli.yml up -d
+      # Habilita cache do Maven; NÃO instala JDK no host
+      - name: Setup Java cache
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: ${{ env.JAVA_VERSION }}
+          cache: maven
 
