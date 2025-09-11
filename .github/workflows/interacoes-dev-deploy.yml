@@ -6,20 +6,21 @@ on:
     branches:
       - develop
 
-      
 jobs:
   deploy:
     runs-on: [self-hosted, Linux, X64, dev-backend-runner]
+    env:
+      JAVA_VERSION: '17'
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Habilita cache do Maven; NÃO instala JDK no host
       - name: Setup Java cache
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: ${{ env.JAVA_VERSION }}
           cache: maven
+
 
