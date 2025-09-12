@@ -28,10 +28,10 @@ jobs:
           cat <<EOF > dspace/config/local.cfg
           dspace.dir=/volumes/dspaceinstall
           dspace.server.url = https://dspace.dev.interacoes.ltap.ifce.edu.br/server
-          dspace.server.ssr.url = ${dspace.server.url}
+          dspace.server.ssr.url = https://dspace.dev.interacoes.ltap.ifce.edu.br/server
           dspace.ui.url = https://angular-dspace.dev.interacoes.ltap.ifce.edu.br
           dspace.name = Interações
-          assetstore.dir = ${dspace.dir}/assetstore
+          assetstore.dir = /volumes/dspaceinstall/assetstore
           default.language = pt_BR
           solr.server = http://localhost:8983/solr
           db.url = jdbc:postgresql://localhost:5432/dspace
