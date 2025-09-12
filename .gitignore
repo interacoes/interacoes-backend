@@ -33,7 +33,9 @@ nb-configuration.xml
 !/build.properties
 
 # Ignore a local.cfg file in root folder, if it exists
+/local.cfg
 # Also ignore it under dspace/config
+/dspace/config/local.cfg
 
 ##Mac noise
 .DS_Store

@@ -1,4 +1,4 @@
-name: Deploy Backend (DSpace) - Branch develop 10-09-2025
+name: Deploy Backend (DSpace) - Branch develop
 
 on:
   workflow_dispatch:
@@ -23,14 +23,22 @@ jobs:
           java-version: ${{ env.JAVA_VERSION }}
           cache: maven
 
-      - name: Install Maven
-        run: sudo apt-get update && sudo apt-get install -y maven
-
-      - name: Install Ant
-        run: sudo apt-get install -y ant
+      - name: Criar arquivo local.cfg (configuração DSpace)
+        run: |
+          cat <<EOF > dspace/config/local.cfg
+          dspace.dir=/volumes/dspaceinstall
+          dspace.server.url = https://dpace.dev.interacoes.ltap.ifce.edu.br/server
+          dspace.ui.url = https://angular-dspace.dev.interacoes.ltap.ifce.edu.br
+          dspace.name = InterAções
+          default.language = pt_BR
+          db.url = jdbc:postgresql://localhost:5432/dspace
+          db.username = dspace
+          db.password = @abcd1234
+          ldn.enabled = true
+          EOF
 
       - name: Build with Maven
-        run: mvn package -B
+        run: mvn package
 
       - name: Fresh Install DSpace (ant fresh_install)
         run: |
