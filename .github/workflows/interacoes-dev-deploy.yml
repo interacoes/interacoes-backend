@@ -44,4 +44,7 @@ jobs:
         run: |
           cd dspace/target/dspace-installer
           ant fresh_install
+          
+      - name: Reiniciar DSpace REST (systemd)
+        run: sudo systemctl restart dspace-rest
 
