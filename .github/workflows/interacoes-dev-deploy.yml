@@ -27,19 +27,16 @@ jobs:
         run: |
           cat <<EOF > dspace/config/local.cfg
           dspace.dir=/volumes/dspaceinstall
-          dspace.server.url = https://dspace.dev.interacoes.ltap.ifce.edu.br/server
+          dspace.server.url = http://localhost:8080/server
           dspace.server.ssr.url = https://dspace.dev.interacoes.ltap.ifce.edu.br/server
           dspace.ui.url = https://angular-dspace.dev.interacoes.ltap.ifce.edu.br
-          dspace.name = Interações
+          dspace.name = InterAções
           assetstore.dir = /volumes/dspaceinstall/assetstore
           default.language = pt_BR
           solr.server = http://localhost:8983/solr
-          db.url = jdbc:postgresql://localhost:5432/dspace
+          # Database username and password
           db.username = dspace
-          db.password = @abcd1234
-          handle.prefix = 123456789
-          #spring.servlet.multipart.max-file-size = 512MB
-          #spring.servlet.multipart.max-request-size = 512MB
+          db.password = dspace
           ldn.enabled = true
           EOF
 
