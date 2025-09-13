@@ -35,6 +35,7 @@ jobs:
           default.language = pt_BR
           solr.server = http://localhost:8983/solr
           # Database username and password
+          db.url = jdbc:postgresql://localhost:5432/dspace
           db.username = dspace
           db.password = @abcd1234
           ldn.enabled = true
