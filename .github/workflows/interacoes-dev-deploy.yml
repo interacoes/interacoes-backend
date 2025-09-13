@@ -26,18 +26,36 @@ jobs:
       - name: Criar arquivo local.cfg (configuração DSpace)
         run: |
           cat <<EOF > dspace/config/local.cfg
-          dspace.dir=/volumes/dspaceinstall
+          dspace.dir = /volumes/dspaceinstall
           dspace.server.url = https://dspace.dev.interacoes.ltap.ifce.edu.br/server
+          dspace.server.ssr.url = https://dspace.dev.interacoes.ltap.ifce.edu.br/server
           dspace.ui.url = https://angular-dspace.dev.interacoes.ltap.ifce.edu.br
-          dspace.name = InterAções
-          assetstore.dir = /volumes/dspaceinstall/assetstore
+          dspace.name = DSpace at My University
+          dspace.shortname = DSpace
           default.language = pt_BR
           solr.server = http://localhost:8983/solr
-          # Database username and password
+          solr.multicorePrefix =
           db.url = jdbc:postgresql://localhost:5432/dspace
+          db.driver = org.postgresql.Driver
+          db.dialect = org.dspace.util.DSpacePostgreSQLDialect
           db.username = dspace
           db.password = @abcd1234
-          ldn.enabled = true
+          db.schema = public
+          db.maxconnections = 30
+          db.maxwait = 10000
+          db.minidle = 0
+          db.maxidle = 10
+          db.initialsize = 0
+          db.maxconnlifetime = -1
+          db.removeabandoned = false
+          db.removeabandonedtimeout = 300
+          logging.server.include-after-request = false
+          logging.server.include-client-info = false
+          logging.server.include-headers = false
+          logging.server.include-payload = false
+          logging.server.include-query-string = false
+          logging.server.include-stacktrace-for-httpcode = 422
+          logging.server.max-payload-length = 10000
           EOF
 
       - name: Build with Maven
