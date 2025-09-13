@@ -36,7 +36,7 @@ jobs:
           solr.server = http://localhost:8983/solr
           # Database username and password
           db.username = dspace
-          db.password = dspace
+          db.password = @abcd1234
           ldn.enabled = true
           EOF
 
