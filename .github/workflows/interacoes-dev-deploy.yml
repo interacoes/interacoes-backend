@@ -27,8 +27,7 @@ jobs:
         run: |
           cat <<EOF > dspace/config/local.cfg
           dspace.dir=/volumes/dspaceinstall
-          dspace.server.url = http://localhost:8080/server
-          dspace.server.ssr.url = https://dspace.dev.interacoes.ltap.ifce.edu.br/server
+          dspace.server.url = https://dspace.dev.interacoes.ltap.ifce.edu.br/server
           dspace.ui.url = https://angular-dspace.dev.interacoes.ltap.ifce.edu.br
           dspace.name = InterAções
           assetstore.dir = /volumes/dspaceinstall/assetstore
