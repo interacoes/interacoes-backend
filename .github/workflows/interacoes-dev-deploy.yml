@@ -29,9 +29,9 @@ jobs:
           dspace.dir = /volumes/dspaceinstall
           dspace.server.url = https://dspace.dev.interacoes.ltap.ifce.edu.br/server
           dspace.server.ssr.url = https://dspace.dev.interacoes.ltap.ifce.edu.br/server
-          dspace.ui.url = https://angular-dspace.dev.interacoes.ltap.ifce.edu.br
-          dspace.name = DSpace at My University
-          dspace.shortname = DSpace
+          dspace.ui.url = https://dspace.dev.interacoes.ltap.ifce.edu.br
+          dspace.name = InterAções - SASE/MEC
+          dspace.shortname = InterAções
           default.language = pt_BR
           solr.server = http://localhost:8983/solr
           solr.multicorePrefix =
