@@ -410,6 +410,97 @@
             </row>
         </form>
 
+<!--        <form name="storyStep">-->
+<!--            <row>-->
+<!--                <field>-->
+<!--                    <dc-schema>dc</dc-schema>-->
+<!--                    <dc-element>title</dc-element>-->
+<!--                    <dc-qualifier></dc-qualifier>-->
+<!--                    <repeatable>false</repeatable>-->
+<!--                    <label>Story</label>-->
+<!--                    <input-type>onebox</input-type>-->
+<!--                    <hint>Insira o título do story.</hint>-->
+<!--                    <required>Campo obrigatório.</required>-->
+<!--                </field>-->
+<!--                <field>-->
+<!--                    <dc-schema>dc</dc-schema>-->
+<!--                    <dc-element>description</dc-element>-->
+<!--                    <dc-qualifier></dc-qualifier>-->
+<!--                    <repeatable>false</repeatable>-->
+<!--                    <label>Descrição</label>-->
+<!--                    <input-type>textarea</input-type>-->
+<!--                    <hint>Insira uma descrição para o story.</hint>-->
+<!--                    <required>Campo obrigatório.</required>-->
+<!--                </field>-->
+<!--            </row>-->
+
+<!--            <row>-->
+<!--                <relation-field>-->
+<!--                    <relationship-type>isStoryOfAcao</relationship-type>-->
+<!--                    <search-configuration>acao</search-configuration>-->
+
+<!--                    <label>Acao</label>-->
+<!--                    <hint>Selecione a acao</hint>-->
+<!--                </relation-field>-->
+<!--            </row>-->
+<!--        </form>-->
+        <form name="downloadPage">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>title</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Título</label>
+                    <input-type>onebox</input-type>
+                    <hint>Insira o título do documento.</hint>
+                    <required>Campo obrigatório.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Descrição</label>
+                    <input-type>textarea</input-type>
+                    <hint>Insira uma descrição para do documento.</hint>
+                    <required>Campo obrigatório.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>author</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Responsável</label>
+                    <input-type>onebox</input-type>
+                    <hint>Insira o responsável pelo envio do documento.</hint>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>issued</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Data</label>
+                    <style>col-sm-3</style>
+                    <input-type>date</input-type>
+                    <hint>Insira a data</hint>
+                    <required>Campo obrigatório.</required>
+                </field>
+            </row>
+
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Categoria</label>
+                    <input-type value-pairs-name="categoria">dropdown</input-type>
+                    <hint>Selecione a categoria</hint>
+                    <required></required>
+                </field>
+            </row>
+        </form>
 
         <!-- Form which defines the *first* metadata page/section for depositing Publication Entities.
              Since Publication Entities are very similar to normal Items, this is nearly identical to the
@@ -1538,6 +1629,41 @@
     <!-- stores the associated stored-values in the database.                  -->
 
     <form-value-pairs>
+
+        <value-pairs value-pairs-name="categoria" dc-term="type">
+            <pair>
+                <displayed-value>Procedimentos</displayed-value>
+                <stored-value>Procedimentos</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Relatorios</displayed-value>
+                <stored-value>Relatorios</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Guias</displayed-value>
+                <stored-value>Guias</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Formularios</displayed-value>
+                <stored-value>Formularios</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Politicas</displayed-value>
+                <stored-value>Politicas</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Imagens</displayed-value>
+                <stored-value>Imagens</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Editais</displayed-value>
+                <stored-value>Editais</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Videos</displayed-value>
+                <stored-value>Videos</stored-value>
+            </pair>
+        </value-pairs>
         <value-pairs value-pairs-name="common_identifiers" dc-term="identifier">
             <pair>
                 <displayed-value>ISSN</displayed-value>

@@ -56,10 +56,13 @@
             PLEASE NOTICE THAT YOU WILL HAVE TO RESTART DSPACE
             - - - - - -
         -->
+<!--        <name-map collection-entity-type="Acao" submission-name="Acao"/>-->
         <name-map collection-handle="123456789/2" submission-name="Acao"/>
+<!--        <name-map collection-entity-type="Story" submission-name="Story"/>-->
+        <name-map collection-handle="123456789/49" submission-name="Download"/>
+<!--        <name-map collection-entity-type="Download" submission-name="Download"/>-->
         <name-map collection-handle="123456789/3" submission-name="Youtube"/>
         <name-map collection-handle="123456789/4" submission-name="Evento"/>
-
 
 
         <name-map collection-entity-type="Publication" submission-name="Publication"/>
@@ -144,6 +147,17 @@
 
         <step-definition id="traditionalpagetwo" mandatory="true">
             <heading>submit.progressbar.describe.steptwo</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+<!--        <step-definition id="storyStep" mandatory="true">-->
+<!--            <heading>submit.progressbar.describe.stepone</heading>-->
+<!--            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>-->
+<!--            <type>submission-form</type>-->
+<!--        </step-definition>-->
+        <step-definition id="downloadPage" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
@@ -347,8 +361,17 @@
             <step id="regulamentacao"/>
             <step id="contato"/>
             <step id="upload"/>
-
         </submission-process>
+        <submission-process name="Download">
+            <step id="collection"/>
+            <step id="downloadPage"/>
+            <step id="upload"/>
+        </submission-process>
+<!--        <submission-process name="Story">-->
+<!--            <step id="collection"/>-->
+<!--            <step id="storyStep"/>-->
+<!--            <step id="upload"/>-->
+<!--        </submission-process>-->
 
         <submission-process name="Youtube">
             <step id="collection"/>
