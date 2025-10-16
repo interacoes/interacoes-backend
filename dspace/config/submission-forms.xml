@@ -493,7 +493,7 @@
                     <dc-schema>dc</dc-schema>
                     <dc-element>type</dc-element>
                     <dc-qualifier></dc-qualifier>
-                    <repeatable>true</repeatable>
+                    <repeatable>false</repeatable>
                     <label>Categoria</label>
                     <input-type value-pairs-name="categoria">dropdown</input-type>
                     <hint>Selecione a categoria</hint>
