@@ -1,14 +1,14 @@
-name: Deploy Backend (DSpace) - Branch tst
+name: Deploy Backend (DSpace) - Branch Main
 
 on:
   workflow_dispatch:
   push:
     branches:
-      - tst
+      - main
 
 jobs:
   deploy:
-    runs-on: [self-hosted, Linux, X64, tst-backend-runner]
+    runs-on: [self-hosted, Linux, X64, www-backend-runner]
     env:
       JAVA_VERSION: '17'
 
