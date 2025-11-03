@@ -56,35 +56,13 @@
             PLEASE NOTICE THAT YOU WILL HAVE TO RESTART DSPACE
             - - - - - -
         -->
-
-        <name-map collection-handle="123456789/15" submission-name="Acre"/>
-        <name-map collection-handle="123456789/8" submission-name="Alagoas"/>
-        <name-map collection-handle="123456789/17" submission-name="Amazonas"/>
-        <name-map collection-handle="123456789/16" submission-name="Amapa"/>
-        <name-map collection-handle="123456789/9" submission-name="Bahia"/>
-        <name-map collection-handle="123456789/6" submission-name="Ceara"/>
-        <name-map collection-handle="123456789/32" submission-name="DistritoFederal"/>
-        <name-map collection-handle="123456789/25" submission-name="EspiritoSanto"/>
-        <name-map collection-handle="123456789/29" submission-name="Goias"/>
-        <name-map collection-handle="123456789/7" submission-name="Maranhao"/>
-        <name-map collection-handle="123456789/26" submission-name="MinasGerais"/>
-        <name-map collection-handle="123456789/31" submission-name="MatoGrossoSul"/>
-        <name-map collection-handle="123456789/30" submission-name="MatoGrosso"/>
-        <name-map collection-handle="123456789/18" submission-name="Para"/>
-        <name-map collection-handle="123456789/10" submission-name="Paraiba"/>
-        <name-map collection-handle="123456789/11" submission-name="Pernambuco"/>
-        <name-map collection-handle="123456789/12" submission-name="Piaui"/>
-        <name-map collection-handle="123456789/22" submission-name="Parana"/>
-        <name-map collection-handle="123456789/27" submission-name="RioJaneiro"/>
-        <name-map collection-handle="123456789/13" submission-name="RioNorte"/>
-        <name-map collection-handle="123456789/19" submission-name="Rondonia"/>
-        <name-map collection-handle="123456789/20" submission-name="Roraima"/>
-        <name-map collection-handle="123456789/24" submission-name="RioSul"/>
-        <name-map collection-handle="123456789/23" submission-name="SantaCatarina"/>
-        <name-map collection-handle="123456789/14" submission-name="Sergipe"/>
-        <name-map collection-handle="123456789/28" submission-name="SaoPaulo"/>
-        <name-map collection-handle="123456789/21" submission-name="Tocantins"/>
-
+        <!--        <name-map collection-entity-type="Acao" submission-name="Acao"/>-->
+        <name-map collection-handle="123456789/2" submission-name="Acao"/>
+        <!--        <name-map collection-entity-type="Story" submission-name="Story"/>-->
+        <name-map collection-handle="123456789/49" submission-name="Download"/>
+        <!--        <name-map collection-entity-type="Download" submission-name="Download"/>-->
+        <name-map collection-handle="123456789/3" submission-name="Youtube"/>
+        <name-map collection-handle="123456789/4" submission-name="Evento"/>
 
 
         <name-map collection-entity-type="Publication" submission-name="Publication"/>
@@ -156,139 +134,12 @@
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
-
-        <step-definition id="acre" mandatory="true">
+        <step-definition id="youtube" mandatory="true">
             <heading>submit.progressbar.describe.stepone</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
-
-        <step-definition id="alagoas" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="amazonas" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="amapa" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="bahia" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="ceara" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="distritoFederal" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="espiritoSanto" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="goias" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="maranhao" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="minasGerais" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="matoGrossoSul" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="matoGrosso" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="para" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="paraiba" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="pernambuco" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="piaui" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="parana" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="rioJaneiro" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="rioNorte" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="rondonia" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="roraima" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="rioSul" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="santaCatarina" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="sergipe" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="saoPaulo" mandatory="true">
-            <heading>submit.progressbar.describe.stepone</heading>
-            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
-            <type>submission-form</type>
-        </step-definition>
-        <step-definition id="tocantins" mandatory="true">
+        <step-definition id="evento" mandatory="true">
             <heading>submit.progressbar.describe.stepone</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
@@ -296,6 +147,17 @@
 
         <step-definition id="traditionalpagetwo" mandatory="true">
             <heading>submit.progressbar.describe.steptwo</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+
+        <!--        <step-definition id="storyStep" mandatory="true">-->
+        <!--            <heading>submit.progressbar.describe.stepone</heading>-->
+        <!--            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>-->
+        <!--            <type>submission-form</type>-->
+        <!--        </step-definition>-->
+        <step-definition id="downloadPage" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
@@ -493,224 +355,32 @@
             <!--Step will be to Sign off on the required DSpace License agreement -->
             <step id="license"/>
         </submission-process>
+        <submission-process name="Acao">
+            <step id="collection"/>
+            <step id="traditionalpageone"/>
+            <step id="regulamentacao"/>
+            <step id="contato"/>
+            <step id="upload"/>
+        </submission-process>
+        <submission-process name="Download">
+            <step id="collection"/>
+            <step id="downloadPage"/>
+            <step id="upload"/>
+        </submission-process>
+        <!--        <submission-process name="Story">-->
+        <!--            <step id="collection"/>-->
+        <!--            <step id="storyStep"/>-->
+        <!--            <step id="upload"/>-->
+        <!--        </submission-process>-->
 
+        <submission-process name="Youtube">
+            <step id="collection"/>
+            <step id="youtube"/>
+        </submission-process>
 
-        <submission-process name="Acre">
+        <submission-process name="Evento">
             <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="acre"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-
-        </submission-process>
-        <submission-process name="Alagoas">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="alagoas"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="Amazonas">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="amazonas"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-
-        </submission-process>
-        <submission-process name="Amapa">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="amapa"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="Bahia">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="bahia"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="Ceara">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="ceara"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="DistritoFederal">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="distritoFederal"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="EspiritoSanto">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="espiritoSanto"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="Goias">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="goias"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="Maranhao">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="maranhao"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="MinasGerais">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="minasGerais"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="MatoGrossoSul">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="matoGrossoSul"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="MatoGrosso">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="matoGrosso"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="Para">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="para"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="Paraiba">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="paraiba"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="Pernambuco">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="pernambuco"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="Piaui">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="piaui"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="Parana">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="parana"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="RioJaneiro">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="rioJaneiro"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="RioNorte">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="rioNorte"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="Rondonia">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="rondonia"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="Roraima">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="roraima"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="RioSul">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="rioSul"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="SantaCatarina">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="santaCatarina"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="Sergipe">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="sergipe"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="SaoPaulo">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="saoPaulo"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
-            <step id="upload"/>
-        </submission-process>
-        <submission-process name="Tocantins">
-            <step id="collection"/>
-            <step id="traditionalpageone"/>
-            <step id="tocantins"/>
-            <step id="regulamentacao"/>
-            <step id="contato"/>
+            <step id="evento"/>
             <step id="upload"/>
         </submission-process>
 

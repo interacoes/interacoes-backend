@@ -122,410 +122,160 @@
                     <required>Campo obrigatório.</required>
                 </field>
             </row>
-        </form>
 
-        <form name="acre">
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>coverage</dc-element>
                     <dc-qualifier>spatial</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Município</label>
+                    <label>Municipio</label>
                     <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
+                    <hint>Selecione o municío da ação.</hint>
                     <required>Campo obrigatório.</required>
-                    <vocabulary>AC</vocabulary>
+                    <vocabulary>municipio</vocabulary>
+                </field>
+            </row>
+
+        </form>
+        <form name="evento">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>title</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Evento</label>
+                    <input-type>onebox</input-type>
+                    <hint>Insira o nome do evento.</hint>
+                    <required>Campo obrigatório.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>event</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Descrição</label>
+                    <input-type>textarea</input-type>
+                    <hint>Insira uma descrição para o evento.</hint>
+                    <required>Campo obrigatório.</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>coverage</dc-element>
+                    <dc-qualifier>spatial</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Municipio</label>
+                    <input-type>onebox</input-type>
+                    <hint>Selecione o municío do evento.</hint>
+                    <required>Campo obrigatório.</required>
+                    <vocabulary>municipio</vocabulary>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>start</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Data de início</label>
+                    <style>col-sm-3</style>
+                    <input-type>date</input-type>
+                    <hint>Insira a data de início</hint>
+                    <required>Campo obrigatório.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>end</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Data de fim</label>
+                    <style>col-sm-3</style>
+                    <input-type>date</input-type>
+                    <hint>Insira a data de fim</hint>
+                    <required>Campo obrigatório.</required>
                 </field>
             </row>
         </form>
-        <form name="alagoas">
+        <form name="youtube">
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
+                    <dc-element>title</dc-element>
+                    <dc-qualifier></dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Município</label>
+                    <label>Webconferência</label>
                     <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
+                    <hint>Insira o nome da webconferência.</hint>
                     <required>Campo obrigatório.</required>
-                    <vocabulary>AL</vocabulary>
+                </field>
+
+                <field>
+
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Descrição</label>
+                    <input-type>onebox</input-type>
+                    <hint>Insira uma descrição para o vídeo.</hint>
+                    <required>Campo obrigatório.</required>
                 </field>
             </row>
-        </form>
-        <form name="amazonas">
+
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>issued</dc-qualifier>
                     <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
+                    <label>Data</label>
+                    <style>col-sm-3</style>
+                    <input-type>date</input-type>
+                    <hint>Insira a data da webconferência</hint>
                     <required>Campo obrigatório.</required>
-                    <vocabulary>AM</vocabulary>
+                </field>
+
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>uri</dc-qualifier>
+                    <label>Link</label>
+                    <input-type>onebox</input-type>
+                    <hint>Link do YouTube</hint>
+                    <required>Campo obrigatório.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <label>Id Video</label>
+                    <input-type>onebox</input-type>
+                    <hint>Id do YouTube</hint>
+                    <required>Campo obrigatório.</required>
                 </field>
             </row>
-        </form>
-        <form name="amapa">
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>other</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Nome do expositor(a)/Descrição</label>
+                    <input-type>series</input-type>
+                    <hint>Insira o nome do expositor(a) e a descrição</hint>
                     <required>Campo obrigatório.</required>
-                    <vocabulary>AP</vocabulary>
                 </field>
             </row>
-        </form>
-        <form name="bahia">
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>BA</vocabulary>
-                </field>
-            </row>
-        </form>
-        <form name="ceara">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>CE</vocabulary>
-                </field>
-            </row>
-        </form>
-        <form name="distritoFederal">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>DF</vocabulary>
-                </field>
-            </row>
-        </form>
-        <form name="espiritoSanto">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>ES</vocabulary>
-                </field>
-            </row>
-        </form>
-        <form name="goias">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>GO</vocabulary>
-                </field>
-            </row>
-        </form>
-        <form name="maranhao">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>MA</vocabulary>
-                </field>
-            </row>
-        </form>
-        <form name="minasGerais">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>MG</vocabulary>
-                </field>
-            </row>
-        </form>
-        <form name="matoGrossoSul">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>MS</vocabulary>
-                </field>
-            </row>
-        </form>
-        <form name="matoGrosso">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>MT</vocabulary>
-                </field>
-            </row>
-        </form>
-        <form name="para">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>PA</vocabulary>
-                </field>
-            </row>
-        </form>
-        <form name="paraiba">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>PB</vocabulary>
-                </field>
-            </row>
-        </form>
-        <form name="pernambuco">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>PE</vocabulary>
-                </field>
-            </row>
-        </form>
-        <form name="piaui">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>PI</vocabulary>
-                </field>
-            </row>
-        </form>
-        <form name="parana">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>PR</vocabulary>
-                </field>
-            </row>
-        </form>
-        <form name="rioJaneiro">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>RJ</vocabulary>
-                </field>
-            </row>
-        </form>
-        <form name="rioNorte">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>RN</vocabulary>
-                </field>
-            </row>
-        </form>
-        <form name="rondonia">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>RO</vocabulary>
-                </field>
-            </row>
-        </form>
-        <form name="roraima">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>RR</vocabulary>
-                </field>
-            </row>
-        </form>
-        <form name="rioSul">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>RS</vocabulary>
-                </field>
-            </row>
-        </form>
-        <form name="santaCatarina">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>SC</vocabulary>
-                </field>
-            </row>
-        </form>
-        <form name="sergipe">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>SE</vocabulary>
-                </field>
-            </row>
-        </form>
-        <form name="saoPaulo">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>SP</vocabulary>
-                </field>
-            </row>
-        </form>
-        <form name="tocantins">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Município</label>
-                    <input-type>onebox</input-type>
-                    <hint>Digite um município e selecione as coordenadas</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>TO</vocabulary>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>illustrator</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Nome do expositor(a)/Lattes</label>
+                    <input-type>series</input-type>
+                    <hint>Insira o nome do expositor(a) e o link do lattes</hint>
                 </field>
             </row>
         </form>
@@ -539,7 +289,7 @@
                     <repeatable>false</repeatable>
                     <label>Regulamentação</label>
                     <input-type>onebox</input-type>
-                    <hint>Não se aplica.</hint>
+                    <hint>Insira a regulamentação.</hint>
                     <required>Campo obrigatório.</required>
                 </field>
 
@@ -550,7 +300,7 @@
                     <repeatable>false</repeatable>
                     <label>Recursos Financeiros</label>
                     <input-type>onebox</input-type>
-                    <hint>Não se aplica.</hint>
+                    <hint>Insira os recursos financeiros.</hint>
                     <required>Campo obrigatório.</required>
                 </field>
 
@@ -561,7 +311,7 @@
                     <repeatable>false</repeatable>
                     <label>Fonte de Recursos</label>
                     <input-type>onebox</input-type>
-                    <hint>Não se aplica.</hint>
+                    <hint>Insira a fonte de recursos.</hint>
                     <required>Campo obrigatório.</required>
                 </field>
             </row>
@@ -660,6 +410,97 @@
             </row>
         </form>
 
+        <!--        <form name="storyStep">-->
+        <!--            <row>-->
+        <!--                <field>-->
+        <!--                    <dc-schema>dc</dc-schema>-->
+        <!--                    <dc-element>title</dc-element>-->
+        <!--                    <dc-qualifier></dc-qualifier>-->
+        <!--                    <repeatable>false</repeatable>-->
+        <!--                    <label>Story</label>-->
+        <!--                    <input-type>onebox</input-type>-->
+        <!--                    <hint>Insira o título do story.</hint>-->
+        <!--                    <required>Campo obrigatório.</required>-->
+        <!--                </field>-->
+        <!--                <field>-->
+        <!--                    <dc-schema>dc</dc-schema>-->
+        <!--                    <dc-element>description</dc-element>-->
+        <!--                    <dc-qualifier></dc-qualifier>-->
+        <!--                    <repeatable>false</repeatable>-->
+        <!--                    <label>Descrição</label>-->
+        <!--                    <input-type>textarea</input-type>-->
+        <!--                    <hint>Insira uma descrição para o story.</hint>-->
+        <!--                    <required>Campo obrigatório.</required>-->
+        <!--                </field>-->
+        <!--            </row>-->
+
+        <!--            <row>-->
+        <!--                <relation-field>-->
+        <!--                    <relationship-type>isStoryOfAcao</relationship-type>-->
+        <!--                    <search-configuration>acao</search-configuration>-->
+
+        <!--                    <label>Acao</label>-->
+        <!--                    <hint>Selecione a acao</hint>-->
+        <!--                </relation-field>-->
+        <!--            </row>-->
+        <!--        </form>-->
+        <form name="downloadPage">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>title</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Título</label>
+                    <input-type>onebox</input-type>
+                    <hint>Insira o título do documento.</hint>
+                    <required>Campo obrigatório.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Descrição</label>
+                    <input-type>textarea</input-type>
+                    <hint>Insira uma descrição para do documento.</hint>
+                    <required>Campo obrigatório.</required>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>contributor</dc-element>
+                    <dc-qualifier>author</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Responsável</label>
+                    <input-type>onebox</input-type>
+                    <hint>Insira o responsável pelo envio do documento.</hint>
+                </field>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>issued</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Data</label>
+                    <style>col-sm-3</style>
+                    <input-type>date</input-type>
+                    <hint>Insira a data</hint>
+                    <required>Campo obrigatório.</required>
+                </field>
+            </row>
+
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Categoria</label>
+                    <input-type value-pairs-name="categoria">dropdown</input-type>
+                    <hint>Selecione a categoria</hint>
+                    <required></required>
+                </field>
+            </row>
+        </form>
 
         <!-- Form which defines the *first* metadata page/section for depositing Publication Entities.
              Since Publication Entities are very similar to normal Items, this is nearly identical to the
@@ -1474,7 +1315,8 @@
                     <label>Resource Version</label>
                     <input-type value-pairs-name="openaire_version_types">dropdown</input-type>
                     <hint>Select the version of the resource. If the resource does not have that information, please
-                        select "Not Applicable (or Unknown)".</hint>
+                        select "Not Applicable (or Unknown)".
+                    </hint>
                     <required></required>
                 </field>
                 <field>
@@ -1787,6 +1629,41 @@
     <!-- stores the associated stored-values in the database.                  -->
 
     <form-value-pairs>
+
+        <value-pairs value-pairs-name="categoria" dc-term="type">
+            <pair>
+                <displayed-value>Procedimentos</displayed-value>
+                <stored-value>Procedimentos</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Relatorios</displayed-value>
+                <stored-value>Relatorios</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Guias</displayed-value>
+                <stored-value>Guias</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Formularios</displayed-value>
+                <stored-value>Formularios</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Politicas</displayed-value>
+                <stored-value>Politicas</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Imagens</displayed-value>
+                <stored-value>Imagens</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Editais</displayed-value>
+                <stored-value>Editais</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Videos</displayed-value>
+                <stored-value>Videos</stored-value>
+            </pair>
+        </value-pairs>
         <value-pairs value-pairs-name="common_identifiers" dc-term="identifier">
             <pair>
                 <displayed-value>ISSN</displayed-value>
