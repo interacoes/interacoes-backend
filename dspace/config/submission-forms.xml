@@ -65,23 +65,35 @@
 
                 <field>
                     <dc-schema>dc</dc-schema>
-                    <dc-element>description</dc-element>
-                    <dc-qualifier>problem</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Problemas</label>
-                    <input-type>onebox</input-type>
-                    <hint>Insira os problemas identificados.</hint>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Núcleo Temático</label>
+                    <input-type value-pairs-name="nucleoTematico">dropdown</input-type>
+                    <hint>Selecione o núcleo temático relacionado à ação.</hint>
                     <required>Campo obrigatório.</required>
                 </field>
 
                 <field>
                     <dc-schema>dc</dc-schema>
-                    <dc-element>subject</dc-element>
+                    <dc-element>type</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Núcleo Temático</label>
-                    <input-type>onebox</input-type>
-                    <hint>Insira o núcleo temático relacionado à ação.</hint>
+                    <label>Esfera da ação</label>
+                    <input-type value-pairs-name="esferas">dropdown</input-type>
+                    <hint>Selecione a esfera da ação.</hint>
+                    <required>Campo obrigatório.</required>
+                </field>
+            </row>
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>problem</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Problemas</label>
+                    <input-type>textarea</input-type>
+                    <hint>Insira os problemas identificados.</hint>
                     <required>Campo obrigatório.</required>
                 </field>
             </row>
@@ -117,7 +129,7 @@
                     <dc-qualifier>objective</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Objetivos</label>
-                    <input-type>onebox</input-type>
+                    <input-type>textarea</input-type>
                     <hint>Adicione os objetivos da ação.</hint>
                     <required>Campo obrigatório.</required>
                 </field>
@@ -128,7 +140,7 @@
                     <dc-schema>dc</dc-schema>
                     <dc-element>coverage</dc-element>
                     <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>false</repeatable>
+                    <repeatable>true</repeatable>
                     <label>Municipio</label>
                     <input-type>onebox</input-type>
                     <hint>Selecione o municío da ação.</hint>
@@ -290,7 +302,6 @@
                     <label>Regulamentação</label>
                     <input-type>onebox</input-type>
                     <hint>Insira a regulamentação.</hint>
-                    <required>Campo obrigatório.</required>
                 </field>
 
                 <field>
@@ -301,7 +312,6 @@
                     <label>Recursos Financeiros</label>
                     <input-type>onebox</input-type>
                     <hint>Insira os recursos financeiros.</hint>
-                    <required>Campo obrigatório.</required>
                 </field>
 
                 <field>
@@ -312,7 +322,6 @@
                     <label>Fonte de Recursos</label>
                     <input-type>onebox</input-type>
                     <hint>Insira a fonte de recursos.</hint>
-                    <required>Campo obrigatório.</required>
                 </field>
             </row>
         </form>
@@ -410,40 +419,40 @@
             </row>
         </form>
 
-<!--        <form name="storyStep">-->
-<!--            <row>-->
-<!--                <field>-->
-<!--                    <dc-schema>dc</dc-schema>-->
-<!--                    <dc-element>title</dc-element>-->
-<!--                    <dc-qualifier></dc-qualifier>-->
-<!--                    <repeatable>false</repeatable>-->
-<!--                    <label>Story</label>-->
-<!--                    <input-type>onebox</input-type>-->
-<!--                    <hint>Insira o título do story.</hint>-->
-<!--                    <required>Campo obrigatório.</required>-->
-<!--                </field>-->
-<!--                <field>-->
-<!--                    <dc-schema>dc</dc-schema>-->
-<!--                    <dc-element>description</dc-element>-->
-<!--                    <dc-qualifier></dc-qualifier>-->
-<!--                    <repeatable>false</repeatable>-->
-<!--                    <label>Descrição</label>-->
-<!--                    <input-type>textarea</input-type>-->
-<!--                    <hint>Insira uma descrição para o story.</hint>-->
-<!--                    <required>Campo obrigatório.</required>-->
-<!--                </field>-->
-<!--            </row>-->
+        <!--        <form name="storyStep">-->
+        <!--            <row>-->
+        <!--                <field>-->
+        <!--                    <dc-schema>dc</dc-schema>-->
+        <!--                    <dc-element>title</dc-element>-->
+        <!--                    <dc-qualifier></dc-qualifier>-->
+        <!--                    <repeatable>false</repeatable>-->
+        <!--                    <label>Story</label>-->
+        <!--                    <input-type>onebox</input-type>-->
+        <!--                    <hint>Insira o título do story.</hint>-->
+        <!--                    <required>Campo obrigatório.</required>-->
+        <!--                </field>-->
+        <!--                <field>-->
+        <!--                    <dc-schema>dc</dc-schema>-->
+        <!--                    <dc-element>description</dc-element>-->
+        <!--                    <dc-qualifier></dc-qualifier>-->
+        <!--                    <repeatable>false</repeatable>-->
+        <!--                    <label>Descrição</label>-->
+        <!--                    <input-type>textarea</input-type>-->
+        <!--                    <hint>Insira uma descrição para o story.</hint>-->
+        <!--                    <required>Campo obrigatório.</required>-->
+        <!--                </field>-->
+        <!--            </row>-->
 
-<!--            <row>-->
-<!--                <relation-field>-->
-<!--                    <relationship-type>isStoryOfAcao</relationship-type>-->
-<!--                    <search-configuration>acao</search-configuration>-->
+        <!--            <row>-->
+        <!--                <relation-field>-->
+        <!--                    <relationship-type>isStoryOfAcao</relationship-type>-->
+        <!--                    <search-configuration>acao</search-configuration>-->
 
-<!--                    <label>Acao</label>-->
-<!--                    <hint>Selecione a acao</hint>-->
-<!--                </relation-field>-->
-<!--            </row>-->
-<!--        </form>-->
+        <!--                    <label>Acao</label>-->
+        <!--                    <hint>Selecione a acao</hint>-->
+        <!--                </relation-field>-->
+        <!--            </row>-->
+        <!--        </form>-->
         <form name="downloadPage">
             <row>
                 <field>
@@ -1629,6 +1638,43 @@
     <!-- stores the associated stored-values in the database.                  -->
 
     <form-value-pairs>
+
+        <value-pairs value-pairs-name="nucleoTematico" dc-term="type">
+            <pair><displayed-value>Busca ativa escolar</displayed-value><stored-value>Busca ativa escolar</stored-value></pair>
+            <pair><displayed-value>Educação ambiental e emergência climática</displayed-value><stored-value>Educação ambiental e emergência climática</stored-value></pair>
+            <pair><displayed-value>Educação inclusiva</displayed-value><stored-value>Educação inclusiva</stored-value></pair>
+            <pair><displayed-value>Escola intercultural</displayed-value><stored-value>Escola intercultural</stored-value></pair>
+            <pair><displayed-value>Equipamentos intersetoriais de convivência comunitária</displayed-value><stored-value>Equipamentos intersetoriais de convivência comunitária</stored-value></pair>
+            <pair><displayed-value>Formação profissional</displayed-value><stored-value>Formação profissional</stored-value></pair>
+            <pair><displayed-value>Governança intersetorial</displayed-value><stored-value>Governança intersetorial</stored-value></pair>
+            <pair><displayed-value>Intersetorialidade nos Planos Municipais e Estaduais de Educação</displayed-value><stored-value>Intersetorialidade nos Planos Municipais e Estaduais de Educação</stored-value></pair>
+            <pair><displayed-value>Mundo do Trabalho</displayed-value><stored-value>Mundo do Trabalho</stored-value></pair>
+            <pair><displayed-value>Políticas de Educação Integral, Integrada e em Tempo Integral</displayed-value><stored-value>Políticas de Educação Integral, Integrada e em Tempo Integral</stored-value></pair>
+            <pair><displayed-value>Primeira Infância - Sistema de Garantia de Direitos</displayed-value><stored-value>Primeira Infância - Sistema de Garantia de Direitos</stored-value></pair>
+            <pair><displayed-value>Programa Saúde na Escola</displayed-value><stored-value>Programa Saúde na Escola</stored-value></pair>
+            <pair><displayed-value>Recomposição de Aprendizagem</displayed-value><stored-value>Recomposição de Aprendizagem</stored-value></pair>
+            <pair><displayed-value>Segurança e Proteção no Ambiente Escolar</displayed-value><stored-value>Segurança e Proteção no Ambiente Escolar</stored-value></pair>
+        </value-pairs>
+
+        <value-pairs value-pairs-name="esferas" dc-term="type">
+            <pair>
+                <displayed-value>Federal</displayed-value>
+                <stored-value>Federal</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Regional</displayed-value>
+                <stored-value>Regional</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Estadual</displayed-value>
+                <stored-value>Estadual</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Municipal</displayed-value>
+                <stored-value>Municipal</stored-value>
+            </pair>
+
+        </value-pairs>
 
         <value-pairs value-pairs-name="categoria" dc-term="type">
             <pair>
