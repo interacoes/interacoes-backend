@@ -78,7 +78,7 @@
                     <dc-schema>dc</dc-schema>
                     <dc-element>type</dc-element>
                     <dc-qualifier></dc-qualifier>
-                    <repeatable>true</repeatable>
+                    <repeatable>false</repeatable>
                     <label>Esfera da ação</label>
                     <input-type value-pairs-name="esferas">dropdown</input-type>
                     <hint>Selecione a esfera da ação.</hint>
