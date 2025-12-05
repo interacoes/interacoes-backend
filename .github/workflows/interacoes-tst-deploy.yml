@@ -60,6 +60,10 @@ jobs:
           mail.server.username = apikey
           mail.server.password = ${{ secrets.SMTP_PASSWD }}
           mail.from.address = no-reply@ltap.ifce.edu.br
+          mail.server=smtp.sendgrid.net
+          mail.server.port=587
+          mail.server.use.tls=true
+          mail.server.use.ssl=false          
           EOF
 
       - name: Build with Maven
