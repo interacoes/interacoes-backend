@@ -46,7 +46,7 @@ public class HiddenLabel extends DSpaceControlledVocabulary {
     @Override
     public boolean storeAuthorityInMetadata() {
         // For backward compatibility controlled vocabularies don't store the node id in
-        // the metadatavalue
+        // the metadatavalue test
         return false;
     }
 
