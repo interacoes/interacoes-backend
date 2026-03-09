@@ -3,7 +3,7 @@ name: DSpace Build & Deploy
 on:
   push:
     branches:
-      - develop
+      - main
   workflow_dispatch:
 
 env:
@@ -73,9 +73,9 @@ jobs:
         run: |
           cat > dspace/config/local.cfg << EOF
           dspace.dir = $DSPACE_INSTALL_DIR
-          dspace.server.url = https://dev.interacoes.ltap.ifce.edu.br/server
-          dspace.server.ssr.url = https://dev.interacoes.ltap.ifce.edu.br/server
-          dspace.ui.url = https://dev.interacoes.ltap.ifce.edu.br
+          dspace.server.url = https://interacoes.ltap.ifce.edu.br/server
+          dspace.server.ssr.url = https://interacoes.ltap.ifce.edu.br/server
+          dspace.ui.url = https://interacoes.ltap.ifce.edu.br
           dspace.name = InterAções - SASE/MEC
           dspace.shortname = InterAções
           default.language = pt_BR
@@ -139,9 +139,9 @@ jobs:
         run: |
           cat > $DSPACE_INSTALL_DIR/config/local.cfg << EOF
           dspace.dir = /dspaceinstall
-          dspace.server.url = https://dev.interacoes.ltap.ifce.edu.br/server
-          dspace.server.ssr.url = https://dev.interacoes.ltap.ifce.edu.br/server
-          dspace.ui.url = https://dev.interacoes.ltap.ifce.edu.br
+          dspace.server.url = https://interacoes.ltap.ifce.edu.br/server
+          dspace.server.ssr.url = https://interacoes.ltap.ifce.edu.br/server
+          dspace.ui.url = https://interacoes.ltap.ifce.edu.br
           dspace.name = InterAções - SASE/MEC
           dspace.shortname = InterAções
           default.language = pt_BR
@@ -235,13 +235,13 @@ jobs:
       - name: Configurar chave SSH
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.VPS_SSH_KEY_DEV }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.VPS_SSH_KEY_MAIN }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H "${{ secrets.VPS_HOST_DEV }}" >> ~/.ssh/known_hosts
+          ssh-keyscan -H "${{ secrets.VPS_HOST_MAIN }}" >> ~/.ssh/known_hosts
 
       - name: Deploy no servidor
         run: |
-          ssh -o StrictHostKeyChecking=no "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST_DEV }}" bash << 'REMOTE'
+          ssh -o StrictHostKeyChecking=no "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST_MAIN }}" bash << 'REMOTE'
             set -e
 
             # Carrega variáveis do .env no servidor
