@@ -1,4 +1,4 @@
-name: DSpace Build & Deploy
+name: Interacoes Build & Deploy
 
 on:
   push:
