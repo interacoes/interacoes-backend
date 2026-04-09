@@ -150,169 +150,171 @@
             </row>
 
         </form>
-        <form name="interset">
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>title</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Nome do Projeto</label>
-                    <input-type>onebox</input-type>
-                    <hint>Insira o nome do projeto.</hint>
-                    <required>Campo obrigatório.</required>
-                </field>
 
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>subject</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Eixo Temático</label>
-                    <input-type value-pairs-name="eixoTematico">dropdown</input-type>
-                    <hint>Selecione o eixo temático relacionado a rede interset.</hint>
-                    <required>Campo obrigatório.</required>
-                </field>
+        <!--Esconder ações interset-->
+<!--        <form name="interset">-->
+<!--            <row>-->
+<!--                <field>-->
+<!--                    <dc-schema>dc</dc-schema>-->
+<!--                    <dc-element>title</dc-element>-->
+<!--                    <dc-qualifier></dc-qualifier>-->
+<!--                    <repeatable>false</repeatable>-->
+<!--                    <label>Nome do Projeto</label>-->
+<!--                    <input-type>onebox</input-type>-->
+<!--                    <hint>Insira o nome do projeto.</hint>-->
+<!--                    <required>Campo obrigatório.</required>-->
+<!--                </field>-->
 
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>type</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Esfera do projeto</label>
-                    <input-type value-pairs-name="esferas">dropdown</input-type>
-                    <hint>Selecione a esfera do projeto.</hint>
-                    <required>Campo obrigatório.</required>
-                </field>
-            </row>
+<!--                <field>-->
+<!--                    <dc-schema>dc</dc-schema>-->
+<!--                    <dc-element>subject</dc-element>-->
+<!--                    <dc-qualifier></dc-qualifier>-->
+<!--                    <repeatable>true</repeatable>-->
+<!--                    <label>Eixo Temático</label>-->
+<!--                    <input-type value-pairs-name="eixoTematico">dropdown</input-type>-->
+<!--                    <hint>Selecione o eixo temático relacionado a rede interset.</hint>-->
+<!--                    <required>Campo obrigatório.</required>-->
+<!--                </field>-->
 
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>publisher</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Instituição Pública de Educação Superior</label>
-                    <input-type value-pairs-name="instituicao">dropdown</input-type>
-                    <hint>Insira o nome da usando a Instituição Pública de Educação Superior.</hint>
-                </field>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>campi</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Nome do Campi</label>
-                    <input-type>onebox</input-type>
-                    <hint>Insira o nome do Campi.</hint>
-                </field>
-            </row>
-            <row>
-                <field>
+<!--                <field>-->
+<!--                    <dc-schema>dc</dc-schema>-->
+<!--                    <dc-element>type</dc-element>-->
+<!--                    <dc-qualifier></dc-qualifier>-->
+<!--                    <repeatable>false</repeatable>-->
+<!--                    <label>Esfera do projeto</label>-->
+<!--                    <input-type value-pairs-name="esferas">dropdown</input-type>-->
+<!--                    <hint>Selecione a esfera do projeto.</hint>-->
+<!--                    <required>Campo obrigatório.</required>-->
+<!--                </field>-->
+<!--            </row>-->
 
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>description</dc-element>
-                    <dc-qualifier>objective</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Objetivos</label>
-                    <input-type>textarea</input-type>
-                    <hint>Adicione os objetivos do projeto.</hint>
-                    <required>Campo obrigatório.</required>
-                </field>
-            </row>
+<!--            <row>-->
+<!--                <field>-->
+<!--                    <dc-schema>dc</dc-schema>-->
+<!--                    <dc-element>publisher</dc-element>-->
+<!--                    <dc-qualifier></dc-qualifier>-->
+<!--                    <repeatable>false</repeatable>-->
+<!--                    <label>Instituição Pública de Educação Superior</label>-->
+<!--                    <input-type value-pairs-name="instituicao">dropdown</input-type>-->
+<!--                    <hint>Insira o nome da usando a Instituição Pública de Educação Superior.</hint>-->
+<!--                </field>-->
+<!--                <field>-->
+<!--                    <dc-schema>dc</dc-schema>-->
+<!--                    <dc-element>coverage</dc-element>-->
+<!--                    <dc-qualifier>campi</dc-qualifier>-->
+<!--                    <repeatable>false</repeatable>-->
+<!--                    <label>Nome do Campi</label>-->
+<!--                    <input-type>onebox</input-type>-->
+<!--                    <hint>Insira o nome do Campi.</hint>-->
+<!--                </field>-->
+<!--            </row>-->
+<!--            <row>-->
+<!--                <field>-->
 
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>spatial</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Municipio</label>
-                    <input-type>onebox</input-type>
-                    <hint>Selecione o municío do projeto.</hint>
-                    <required>Campo obrigatório.</required>
-                    <vocabulary>municipio</vocabulary>
-                </field>
-            </row>
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>description</dc-element>
-                    <dc-qualifier>target-audience</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Público-Alvo</label>
-                    <input-type>onebox</input-type>
-                    <hint>Descreva o público-alvo do projeto.</hint>
-                </field>
-            </row>
+<!--                    <dc-schema>dc</dc-schema>-->
+<!--                    <dc-element>description</dc-element>-->
+<!--                    <dc-qualifier>objective</dc-qualifier>-->
+<!--                    <repeatable>true</repeatable>-->
+<!--                    <label>Objetivos</label>-->
+<!--                    <input-type>textarea</input-type>-->
+<!--                    <hint>Adicione os objetivos do projeto.</hint>-->
+<!--                    <required>Campo obrigatório.</required>-->
+<!--                </field>-->
+<!--            </row>-->
 
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>description</dc-element>
-                    <dc-qualifier>results</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Resultados Esperados/Alcançados</label>
-                    <input-type>textarea</input-type>
-                    <hint>Descreva os resultados esperados e/ou alcançados.</hint>
-                </field>
-            </row>
+<!--            <row>-->
+<!--                <field>-->
+<!--                    <dc-schema>dc</dc-schema>-->
+<!--                    <dc-element>coverage</dc-element>-->
+<!--                    <dc-qualifier>spatial</dc-qualifier>-->
+<!--                    <repeatable>true</repeatable>-->
+<!--                    <label>Municipio</label>-->
+<!--                    <input-type>onebox</input-type>-->
+<!--                    <hint>Selecione o municío do projeto.</hint>-->
+<!--                    <required>Campo obrigatório.</required>-->
+<!--                    <vocabulary>municipio</vocabulary>-->
+<!--                </field>-->
+<!--            </row>-->
+<!--            <row>-->
+<!--                <field>-->
+<!--                    <dc-schema>dc</dc-schema>-->
+<!--                    <dc-element>description</dc-element>-->
+<!--                    <dc-qualifier>target-audience</dc-qualifier>-->
+<!--                    <repeatable>true</repeatable>-->
+<!--                    <label>Público-Alvo</label>-->
+<!--                    <input-type>onebox</input-type>-->
+<!--                    <hint>Descreva o público-alvo do projeto.</hint>-->
+<!--                </field>-->
+<!--            </row>-->
 
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>contributor</dc-element>
-                    <dc-qualifier>coordinator</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Nome do(s) Coordenador(es)</label>
-                    <input-type>onebox</input-type>
-                    <hint>Informe o(s) nome(s) do(s) coordenador(es) do projeto.</hint>
-                </field>
-            </row>
+<!--            <row>-->
+<!--                <field>-->
+<!--                    <dc-schema>dc</dc-schema>-->
+<!--                    <dc-element>description</dc-element>-->
+<!--                    <dc-qualifier>results</dc-qualifier>-->
+<!--                    <repeatable>true</repeatable>-->
+<!--                    <label>Resultados Esperados/Alcançados</label>-->
+<!--                    <input-type>textarea</input-type>-->
+<!--                    <hint>Descreva os resultados esperados e/ou alcançados.</hint>-->
+<!--                </field>-->
+<!--            </row>-->
 
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>contributor</dc-element>
-                    <dc-qualifier>scholarship-holder</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Bolsistas</label>
-                    <input-type>onebox</input-type>
-                    <hint>Informe os bolsistas vinculados ao projeto.</hint>
-                </field>
+<!--            <row>-->
+<!--                <field>-->
+<!--                    <dc-schema>dc</dc-schema>-->
+<!--                    <dc-element>contributor</dc-element>-->
+<!--                    <dc-qualifier>coordinator</dc-qualifier>-->
+<!--                    <repeatable>true</repeatable>-->
+<!--                    <label>Nome do(s) Coordenador(es)</label>-->
+<!--                    <input-type>onebox</input-type>-->
+<!--                    <hint>Informe o(s) nome(s) do(s) coordenador(es) do projeto.</hint>-->
+<!--                </field>-->
+<!--            </row>-->
 
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>contributor</dc-element>
-                    <dc-qualifier>editor</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Parcerias Intersetoriais</label>
-                    <input-type>onebox</input-type>
-                    <hint>Informe as parcerias intersetoriais envolvidas</hint>
-                </field>
+<!--            <row>-->
+<!--                <field>-->
+<!--                    <dc-schema>dc</dc-schema>-->
+<!--                    <dc-element>contributor</dc-element>-->
+<!--                    <dc-qualifier>scholarship-holder</dc-qualifier>-->
+<!--                    <repeatable>true</repeatable>-->
+<!--                    <label>Bolsistas</label>-->
+<!--                    <input-type>onebox</input-type>-->
+<!--                    <hint>Informe os bolsistas vinculados ao projeto.</hint>-->
+<!--                </field>-->
 
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>contributor</dc-element>
-                    <dc-qualifier>intersectoral-agent</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Agentes Intersetoriais</label>
-                    <input-type>onebox</input-type>
-                    <hint>Informe os agentes intersetoriais envolvidos.</hint>
-                </field>
-            </row>
+<!--                <field>-->
+<!--                    <dc-schema>dc</dc-schema>-->
+<!--                    <dc-element>contributor</dc-element>-->
+<!--                    <dc-qualifier>editor</dc-qualifier>-->
+<!--                    <repeatable>true</repeatable>-->
+<!--                    <label>Parcerias Intersetoriais</label>-->
+<!--                    <input-type>onebox</input-type>-->
+<!--                    <hint>Informe as parcerias intersetoriais envolvidas</hint>-->
+<!--                </field>-->
 
-            <row>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>relation</dc-element>
-                    <dc-qualifier>socialmedia</dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Redes Sociais</label>
-                    <input-type>onebox</input-type>
-                    <hint>Informe links de redes sociais (Instagram, YouTube, etc.).</hint>
-                </field>
-            </row>
-        </form>
+<!--                <field>-->
+<!--                    <dc-schema>dc</dc-schema>-->
+<!--                    <dc-element>contributor</dc-element>-->
+<!--                    <dc-qualifier>intersectoral-agent</dc-qualifier>-->
+<!--                    <repeatable>true</repeatable>-->
+<!--                    <label>Agentes Intersetoriais</label>-->
+<!--                    <input-type>onebox</input-type>-->
+<!--                    <hint>Informe os agentes intersetoriais envolvidos.</hint>-->
+<!--                </field>-->
+<!--            </row>-->
+
+<!--            <row>-->
+<!--                <field>-->
+<!--                    <dc-schema>dc</dc-schema>-->
+<!--                    <dc-element>relation</dc-element>-->
+<!--                    <dc-qualifier>socialmedia</dc-qualifier>-->
+<!--                    <repeatable>true</repeatable>-->
+<!--                    <label>Redes Sociais</label>-->
+<!--                    <input-type>onebox</input-type>-->
+<!--                    <hint>Informe links de redes sociais (Instagram, YouTube, etc.).</hint>-->
+<!--                </field>-->
+<!--            </row>-->
+<!--        </form>-->
         <form name="evento">
             <row>
                 <field>
@@ -1820,79 +1822,83 @@
 
 
         </value-pairs>
-        <value-pairs value-pairs-name="eixoTematico" dc-term="type">
 
-            <pair>
-                <displayed-value>Eixo 1 – Educação para a Emancipação</displayed-value>
-                <stored-value>Eixo 1 – Educação para a Emancipação</stored-value>
-            </pair>
 
-            <pair>
-                <displayed-value>Eixo 2 – Valorização do Patrimônio Cultural, Histórico e Natural</displayed-value>
-                <stored-value>Eixo 2 – Valorização do Patrimônio Cultural, Histórico e Natural</stored-value>
-            </pair>
+<!--Esconder eixoTematico interset-->
 
-            <pair>
-                <displayed-value>Eixo 3 – Saúde Coletiva</displayed-value>
-                <stored-value>Eixo 3 – Saúde Coletiva</stored-value>
-            </pair>
+<!--        <value-pairs value-pairs-name="eixoTematico" dc-term="type">-->
 
-            <pair>
-                <displayed-value>Eixo 4 – Popularização da Ciência</displayed-value>
-                <stored-value>Eixo 4 – Popularização da Ciência</stored-value>
-            </pair>
+<!--            <pair>-->
+<!--                <displayed-value>Eixo 1 – Educação para a Emancipação</displayed-value>-->
+<!--                <stored-value>Eixo 1 – Educação para a Emancipação</stored-value>-->
+<!--            </pair>-->
 
-            <pair>
-                <displayed-value>Eixo 5 – Desenvolvimento Agrário</displayed-value>
-                <stored-value>Eixo 5 – Desenvolvimento Agrário</stored-value>
-            </pair>
+<!--            <pair>-->
+<!--                <displayed-value>Eixo 2 – Valorização do Patrimônio Cultural, Histórico e Natural</displayed-value>-->
+<!--                <stored-value>Eixo 2 – Valorização do Patrimônio Cultural, Histórico e Natural</stored-value>-->
+<!--            </pair>-->
 
-            <pair>
-                <displayed-value>Eixo 6 – Meio Ambiente e Mudanças Climáticas</displayed-value>
-                <stored-value>Eixo 6 – Meio Ambiente e Mudanças Climáticas</stored-value>
-            </pair>
+<!--            <pair>-->
+<!--                <displayed-value>Eixo 3 – Saúde Coletiva</displayed-value>-->
+<!--                <stored-value>Eixo 3 – Saúde Coletiva</stored-value>-->
+<!--            </pair>-->
 
-            <pair>
-                <displayed-value>Eixo 7 – Busca Ativa</displayed-value>
-                <stored-value>Eixo 7 – Busca Ativa</stored-value>
-            </pair>
+<!--            <pair>-->
+<!--                <displayed-value>Eixo 4 – Popularização da Ciência</displayed-value>-->
+<!--                <stored-value>Eixo 4 – Popularização da Ciência</stored-value>-->
+<!--            </pair>-->
 
-            <pair>
-                <displayed-value>Eixo 8 – Primeira Infância e Garantia de Direitos</displayed-value>
-                <stored-value>Eixo 8 – Primeira Infância e Garantia de Direitos</stored-value>
-            </pair>
+<!--            <pair>-->
+<!--                <displayed-value>Eixo 5 – Desenvolvimento Agrário</displayed-value>-->
+<!--                <stored-value>Eixo 5 – Desenvolvimento Agrário</stored-value>-->
+<!--            </pair>-->
 
-            <pair>
-                <displayed-value>Eixo 9 – Recomposição das Aprendizagens</displayed-value>
-                <stored-value>Eixo 9 – Recomposição das Aprendizagens</stored-value>
-            </pair>
+<!--            <pair>-->
+<!--                <displayed-value>Eixo 6 – Meio Ambiente e Mudanças Climáticas</displayed-value>-->
+<!--                <stored-value>Eixo 6 – Meio Ambiente e Mudanças Climáticas</stored-value>-->
+<!--            </pair>-->
 
-            <pair>
-                <displayed-value>Eixo 10 – Saúde na Escola</displayed-value>
-                <stored-value>Eixo 10 – Saúde na Escola</stored-value>
-            </pair>
+<!--            <pair>-->
+<!--                <displayed-value>Eixo 7 – Busca Ativa</displayed-value>-->
+<!--                <stored-value>Eixo 7 – Busca Ativa</stored-value>-->
+<!--            </pair>-->
 
-            <pair>
-                <displayed-value>Eixo 11 – Equipamentos Intersetoriais</displayed-value>
-                <stored-value>Eixo 11 – Equipamentos Intersetoriais</stored-value>
-            </pair>
+<!--            <pair>-->
+<!--                <displayed-value>Eixo 8 – Primeira Infância e Garantia de Direitos</displayed-value>-->
+<!--                <stored-value>Eixo 8 – Primeira Infância e Garantia de Direitos</stored-value>-->
+<!--            </pair>-->
 
-            <pair>
-                <displayed-value>Eixo 12 – Segurança no Ambiente Escolar</displayed-value>
-                <stored-value>Eixo 12 – Segurança no Ambiente Escolar</stored-value>
-            </pair>
+<!--            <pair>-->
+<!--                <displayed-value>Eixo 9 – Recomposição das Aprendizagens</displayed-value>-->
+<!--                <stored-value>Eixo 9 – Recomposição das Aprendizagens</stored-value>-->
+<!--            </pair>-->
 
-            <pair>
-                <displayed-value>Eixo 13 – Educação de Jovens e Adultos (EJA)</displayed-value>
-                <stored-value>Eixo 13 – Educação de Jovens e Adultos (EJA)</stored-value>
-            </pair>
+<!--            <pair>-->
+<!--                <displayed-value>Eixo 10 – Saúde na Escola</displayed-value>-->
+<!--                <stored-value>Eixo 10 – Saúde na Escola</stored-value>-->
+<!--            </pair>-->
 
-            <pair>
-                <displayed-value>Eixo 14 – Políticas de Educação Integral</displayed-value>
-                <stored-value>Eixo 14 – Políticas de Educação Integral</stored-value>
-            </pair>
+<!--            <pair>-->
+<!--                <displayed-value>Eixo 11 – Equipamentos Intersetoriais</displayed-value>-->
+<!--                <stored-value>Eixo 11 – Equipamentos Intersetoriais</stored-value>-->
+<!--            </pair>-->
 
-        </value-pairs>
+<!--            <pair>-->
+<!--                <displayed-value>Eixo 12 – Segurança no Ambiente Escolar</displayed-value>-->
+<!--                <stored-value>Eixo 12 – Segurança no Ambiente Escolar</stored-value>-->
+<!--            </pair>-->
+
+<!--            <pair>-->
+<!--                <displayed-value>Eixo 13 – Educação de Jovens e Adultos (EJA)</displayed-value>-->
+<!--                <stored-value>Eixo 13 – Educação de Jovens e Adultos (EJA)</stored-value>-->
+<!--            </pair>-->
+
+<!--            <pair>-->
+<!--                <displayed-value>Eixo 14 – Políticas de Educação Integral</displayed-value>-->
+<!--                <stored-value>Eixo 14 – Políticas de Educação Integral</stored-value>-->
+<!--            </pair>-->
+
+<!--        </value-pairs>-->
 
         <value-pairs value-pairs-name="esferas" dc-term="type">
             <pair>
