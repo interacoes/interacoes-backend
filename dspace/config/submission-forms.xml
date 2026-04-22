@@ -143,7 +143,7 @@
                     <repeatable>true</repeatable>
                     <label>Municipio</label>
                     <input-type>onebox</input-type>
-                    <hint>Selecione o municío da ação.</hint>
+                    <hint>Selecione o município da ação.</hint>
                     <required>Campo obrigatório.</required>
                     <vocabulary>municipio</vocabulary>
                 </field>
@@ -527,6 +527,41 @@
                 </field>
             </row>
 
+        </form>
+        <form name="equipamentos">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>title</dc-element>
+                    <dc-qualifier>alternative</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Nome do equipamento</label>
+                    <input-type>onebox</input-type>
+                    <hint>Insira o nome do equipamento.</hint>
+                </field>
+
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier>classification</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Categoria do equipamento</label>
+                    <input-type value-pairs-name="categoriaEquipamentos">dropdown</input-type>
+                    <hint>Selecione a categoria do equipamento.</hint>
+                </field>
+            </row>
+
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>other</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Coordenadas</label>
+                    <input-type>onebox</input-type>
+                    <hint>Insira as coordenadas geográficas do equipamento. Ex: -3.7442711428225555, -38.53603104699167</hint>
+                </field>
+            </row>
         </form>
 
         <!-- Form which defines the second page/section of the "traditional" DSpace submission process,
@@ -1819,11 +1854,20 @@
             <pair><displayed-value>Programa Saúde na Escola</displayed-value><stored-value>Programa Saúde na Escola</stored-value></pair>
             <pair><displayed-value>Recomposição de Aprendizagem</displayed-value><stored-value>Recomposição de Aprendizagem</stored-value></pair>
             <pair><displayed-value>Segurança e Proteção no Ambiente Escolar</displayed-value><stored-value>Segurança e Proteção no Ambiente Escolar</stored-value></pair>
-
-
         </value-pairs>
 
-
+        <value-pairs value-pairs-name="categoriaEquipamentos" dc-term="type">
+            <pair><displayed-value>Escola</displayed-value><stored-value>Escola</stored-value></pair>
+            <pair><displayed-value>Secretaria</displayed-value><stored-value>Secretaria</stored-value></pair>
+            <pair><displayed-value>Universidade</displayed-value><stored-value>Universidade</stored-value></pair>
+            <pair><displayed-value>Instituto</displayed-value><stored-value>Instituto</stored-value></pair>
+            <pair><displayed-value>Hospital</displayed-value><stored-value>Hospital</stored-value></pair>
+            <pair><displayed-value>Posto de Saúde</displayed-value><stored-value>Posto de Saúde</stored-value></pair>
+            <pair><displayed-value>Centro Cultural</displayed-value><stored-value>Centro Cultural</stored-value></pair>
+            <pair><displayed-value>Biblioteca</displayed-value><stored-value>Biblioteca</stored-value></pair>
+            <pair><displayed-value>Equipamento Esportivo</displayed-value><stored-value>Equipamento Esportivo</stored-value></pair>
+            <pair><displayed-value>Outro</displayed-value><stored-value>Outro</stored-value></pair>
+        </value-pairs>
 <!--Esconder eixoTematico interset-->
 
 <!--        <value-pairs value-pairs-name="eixoTematico" dc-term="type">-->
