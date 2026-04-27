@@ -537,7 +537,7 @@
                     <repeatable>true</repeatable>
                     <label>Nome do equipamento</label>
                     <input-type>onebox</input-type>
-                    <hint>Insira o nome do equipamento.</hint>
+                    <hint>Insira o nome do equipamento</hint>
                 </field>
 
                 <field>
@@ -547,7 +547,7 @@
                     <repeatable>true</repeatable>
                     <label>Categoria do equipamento</label>
                     <input-type>onebox</input-type>
-                    <hint>Selecione a categoria do equipamento.</hint>
+                    <hint>Selecione a categoria do equipamento</hint>
                 </field>
             </row>
 
