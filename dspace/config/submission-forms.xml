@@ -535,7 +535,7 @@
                     <dc-element>description</dc-element>
                     <dc-qualifier>equipment</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Nome do equipamento/Coordenadas/Categoria do equipamento</label>
+                    <label>Nome do equipamento/Categoria do equipamento/Coordenadas</label>
                     <input-type>series</input-type>
                     <hint>Insira o nome, categoria e as coordenadas geográficas do equipamento. Ex das coordenadas: -3.7442711428225555, -38.53603104699167</hint>
                 </field>
