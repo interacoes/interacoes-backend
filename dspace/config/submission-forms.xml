@@ -150,6 +150,19 @@
             </row>
 
         </form>
+        <form name="link">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>uri</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Link/Descrição</label>
+                    <input-type>series</input-type>
+                    <hint>Insira o link e a descrição.</hint>
+                </field>
+            </row>
+        </form>
 
         <!--Esconder ações interset-->
 <!--        <form name="interset">-->
