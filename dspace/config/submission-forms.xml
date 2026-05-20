@@ -157,9 +157,9 @@
                     <dc-element>description</dc-element>
                     <dc-qualifier>uri</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Link/Descrição</label>
+                    <label>Descrição/Link</label>
                     <input-type>series</input-type>
-                    <hint>Insira o link e a descrição.</hint>
+                    <hint>Insira a descrição e o link.</hint>
                 </field>
             </row>
         </form>
