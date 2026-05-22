@@ -10,7 +10,7 @@ Sua conta foi criada com sucesso. Para garantir a segurança dos seus dados e at
     ${params[0]}
 
 Se precisar de qualquer ajuda para dar os primeiros passos, nossa equipe de suporte está à disposição.
-Se tiver qualquer dúvida ou encontrar algum problema durante o acesso, por favor, responda a este e-mail ou entre em contato conosco pelo ${config.get('mail.from.address')}
+Se tiver qualquer dúvida ou encontrar algum problema durante o acesso, por favor, responda a este e-mail ou entre em contato conosco pelo interacoes@ltap.ifce.edu.br
 
 
 ##Se precisar de ajuda com sua conta, envie um e-mail para ${config.get("mail.helpdesk")}.
