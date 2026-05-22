@@ -221,6 +221,11 @@
             <processing-class>org.dspace.app.rest.submit.step.UploadStep</processing-class>
             <type>upload</type>
         </step-definition>
+        <step-definition id="uploadOptional">
+            <heading>submit.progressbar.upload</heading>
+            <processing-class>org.dspace.app.rest.submit.step.UploadStep</processing-class>
+            <type>upload</type>
+        </step-definition>
         <step-definition id="license">
             <heading>submit.progressbar.license</heading>
             <processing-class>org.dspace.app.rest.submit.step.LicenseStep</processing-class>
@@ -381,7 +386,7 @@
             <step id="contato"/>
             <step id="link"/>
             <step id="equipamentos"/>
-            <step id="upload"/>
+            <step id="uploadOptional"/>
         </submission-process>
 
         <!--Esconder ações interset-->
