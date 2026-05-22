@@ -1,6 +1,7 @@
 ## E-mail enviado aos usuários do InterAcoes ao se registrarem
 
-#set($subject = "Bem-vindo(a) à InterAções! Confirme sua conta"
+#set($subject = "Bem-vindo(a) à ${config.get('dspace.name')}! Confirme sua conta"
+#set($phone = ${config.get('mail.message.helpdesk.telephone')})
 
 Olá, que bom ter você por aqui!
 Obrigado por se cadastrar na InterAções! Estamos muito felizes em ter você conosco.
@@ -12,5 +13,8 @@ Se precisar de qualquer ajuda para dar os primeiros passos, nossa equipe de supo
 Se tiver qualquer dúvida ou encontrar algum problema durante o acesso, por favor, responda a este e-mail ou entre em contato conosco pelo ${config.get('mail.from.address')}
 
 
+##Se precisar de ajuda com sua conta, envie um e-mail para ${config.get("mail.helpdesk")}.
+#if( $phone ) Ou entre em contato pelo telefone: ${phone}
+#end Equipe ${config.get('dspace.name')}
 
 
