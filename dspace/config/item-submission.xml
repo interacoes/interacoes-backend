@@ -65,7 +65,7 @@
         <name-map collection-handle="123456789/4" submission-name="Evento"/>
 
         <!--Esconder ações interset-->
-        <name-map collection-handle="123456789/79" submission-name="Interset"/>
+        <name-map collection-handle="123456789/70" submission-name="Interset"/>
 
         <name-map collection-entity-type="Publication" submission-name="Publication"/>
         <name-map collection-entity-type="Person" submission-name="Person"/>
