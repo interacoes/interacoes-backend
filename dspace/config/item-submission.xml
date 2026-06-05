@@ -63,7 +63,7 @@
 <!--        <name-map collection-entity-type="Download" submission-name="Download"/>-->
         <name-map collection-handle="123456789/3" submission-name="Youtube"/>
         <name-map collection-handle="123456789/4" submission-name="Evento"/>
-        <name-map collection-handle="123456789/71" submission-name="Interset"/>
+        <name-map collection-handle="123456789/126" submission-name="Interset"/>
 
         <name-map collection-entity-type="Publication" submission-name="Publication"/>
         <name-map collection-entity-type="Person" submission-name="Person"/>
