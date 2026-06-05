@@ -143,13 +143,28 @@
                     <repeatable>true</repeatable>
                     <label>Municipio</label>
                     <input-type>onebox</input-type>
-                    <hint>Selecione o municío da ação.</hint>
+                    <hint>Selecione o município da ação.</hint>
                     <required>Campo obrigatório.</required>
                     <vocabulary>municipio</vocabulary>
                 </field>
             </row>
 
         </form>
+        <form name="link">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>uri</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Descrição/Link</label>
+                    <input-type>series</input-type>
+                    <hint>Insira a descrição e o link.</hint>
+                </field>
+            </row>
+        </form>
+
+        <!--Esconder ações interset-->
         <form name="interset">
             <row>
                 <field>
@@ -191,19 +206,10 @@
                     <dc-schema>dc</dc-schema>
                     <dc-element>publisher</dc-element>
                     <dc-qualifier></dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Instituição Pública de Educação Superior</label>
-                    <input-type value-pairs-name="instituicao">dropdown</input-type>
-                    <hint>Insira o nome da usando a Instituição Pública de Educação Superior.</hint>
-                </field>
-                <field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>coverage</dc-element>
-                    <dc-qualifier>campi</dc-qualifier>
-                    <repeatable>false</repeatable>
-                    <label>Nome do Campi</label>
-                    <input-type>onebox</input-type>
-                    <hint>Insira o nome do Campi.</hint>
+                    <repeatable>true</repeatable>
+                    <label>Instituição Pública de Educação Superior/Nome do Campi</label>
+                    <input-type >series</input-type>
+                    <hint>Insira o nome da usando a Instituição Pública de Educação Superior e o nome do Campi.</hint>
                 </field>
             </row>
             <row>
@@ -525,6 +531,19 @@
                 </field>
             </row>
 
+        </form>
+        <form name="equipamentos">
+            <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>equipment</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Nome do equipamento/Categoria do equipamento/Coordenadas</label>
+                    <input-type>series</input-type>
+                    <hint>Insira o nome, categoria e as coordenadas geográficas do equipamento. Ex das coordenadas: -3.7442711428225555, -38.53603104699167</hint>
+                </field>
+            </row>
         </form>
 
         <!-- Form which defines the second page/section of the "traditional" DSpace submission process,
@@ -1817,9 +1836,9 @@
             <pair><displayed-value>Programa Saúde na Escola</displayed-value><stored-value>Programa Saúde na Escola</stored-value></pair>
             <pair><displayed-value>Recomposição de Aprendizagem</displayed-value><stored-value>Recomposição de Aprendizagem</stored-value></pair>
             <pair><displayed-value>Segurança e Proteção no Ambiente Escolar</displayed-value><stored-value>Segurança e Proteção no Ambiente Escolar</stored-value></pair>
-
-
         </value-pairs>
+
+        <!--Esconder ações interset-->
         <value-pairs value-pairs-name="eixoTematico" dc-term="type">
 
             <pair>
@@ -1944,36 +1963,36 @@
                 <stored-value>Videos</stored-value>
             </pair>
         </value-pairs>
-        <value-pairs value-pairs-name="instituicao" dc-term="type">
-            <pair>
-                <displayed-value>Instituto Federal do Ceará (IFCE)</displayed-value>
-                <stored-value>Instituto Federal do Ceará (IFCE)</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Universidade da Integração Internacional da Lusofonia Afro-Brasileira (UNILAB)</displayed-value>
-                <stored-value>Universidade da Integração Internacional da Lusofonia Afro-Brasileira (UNILAB)</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Universidade Estadual do Ceará (UECE)</displayed-value>
-                <stored-value>Universidade Estadual do Ceará (UECE)</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Universidade Estadual do Vale do Acaraú (UVA)</displayed-value>
-                <stored-value>Universidade Estadual do Vale do Acaraú (UVA)</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Universidade Federal do Cariri (UFCA)</displayed-value>
-                <stored-value>Universidade Federal do Cariri (UFCA)</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Universidade Federal do Ceará (UFC)</displayed-value>
-                <stored-value>Universidade Federal do Ceará (UFC)</stored-value>
-            </pair>
-            <pair>
-                <displayed-value>Universidade Regional do Cariri (URCA)</displayed-value>
-                <stored-value>Universidade Regional do Cariri (URCA)</stored-value>
-            </pair>
-        </value-pairs>
+        <!--        <value-pairs value-pairs-name="instituicao" dc-term="type">-->
+        <!--            <pair>-->
+        <!--                <displayed-value>Instituto Federal do Ceará (IFCE)</displayed-value>-->
+        <!--                <stored-value>Instituto Federal do Ceará (IFCE)</stored-value>-->
+        <!--            </pair>-->
+        <!--            <pair>-->
+        <!--                <displayed-value>Universidade da Integração Internacional da Lusofonia Afro-Brasileira (UNILAB)</displayed-value>-->
+        <!--                <stored-value>Universidade da Integração Internacional da Lusofonia Afro-Brasileira (UNILAB)</stored-value>-->
+        <!--            </pair>-->
+        <!--            <pair>-->
+        <!--                <displayed-value>Universidade Estadual do Ceará (UECE)</displayed-value>-->
+        <!--                <stored-value>Universidade Estadual do Ceará (UECE)</stored-value>-->
+        <!--            </pair>-->
+        <!--            <pair>-->
+        <!--                <displayed-value>Universidade Estadual do Vale do Acaraú (UVA)</displayed-value>-->
+        <!--                <stored-value>Universidade Estadual do Vale do Acaraú (UVA)</stored-value>-->
+        <!--            </pair>-->
+        <!--            <pair>-->
+        <!--                <displayed-value>Universidade Federal do Cariri (UFCA)</displayed-value>-->
+        <!--                <stored-value>Universidade Federal do Cariri (UFCA)</stored-value>-->
+        <!--            </pair>-->
+        <!--            <pair>-->
+        <!--                <displayed-value>Universidade Federal do Ceará (UFC)</displayed-value>-->
+        <!--                <stored-value>Universidade Federal do Ceará (UFC)</stored-value>-->
+        <!--            </pair>-->
+        <!--            <pair>-->
+        <!--                <displayed-value>Universidade Regional do Cariri (URCA)</displayed-value>-->
+        <!--                <stored-value>Universidade Regional do Cariri (URCA)</stored-value>-->
+        <!--            </pair>-->
+        <!--        </value-pairs>-->
         <value-pairs value-pairs-name="common_identifiers" dc-term="identifier">
             <pair>
                 <displayed-value>ISSN</displayed-value>

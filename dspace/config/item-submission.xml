@@ -125,7 +125,18 @@
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
+        <step-definition id="equipamentos" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
+        <step-definition id="link" mandatory="true">
+            <heading>submit.progressbar.describe.stepone</heading>
+            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
+            <type>submission-form</type>
+        </step-definition>
 
+        <!--Esconder ações interset-->
         <step-definition id="interset" mandatory="true">
             <heading>submit.progressbar.describe.stepone</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
@@ -157,11 +168,11 @@
             <type>submission-form</type>
         </step-definition>
 
-<!--        <step-definition id="storyStep" mandatory="true">-->
-<!--            <heading>submit.progressbar.describe.stepone</heading>-->
-<!--            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>-->
-<!--            <type>submission-form</type>-->
-<!--        </step-definition>-->
+        <!--        <step-definition id="storyStep" mandatory="true">-->
+        <!--            <heading>submit.progressbar.describe.stepone</heading>-->
+        <!--            <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>-->
+        <!--            <type>submission-form</type>-->
+        <!--        </step-definition>-->
         <step-definition id="downloadPage" mandatory="true">
             <heading>submit.progressbar.describe.stepone</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
@@ -204,6 +215,11 @@
         </step-definition>
 
         <step-definition id="upload">
+            <heading>submit.progressbar.upload</heading>
+            <processing-class>org.dspace.app.rest.submit.step.UploadStep</processing-class>
+            <type>upload</type>
+        </step-definition>
+        <step-definition id="uploadOptional">
             <heading>submit.progressbar.upload</heading>
             <processing-class>org.dspace.app.rest.submit.step.UploadStep</processing-class>
             <type>upload</type>
@@ -366,14 +382,17 @@
             <step id="traditionalpageone"/>
             <step id="regulamentacao"/>
             <step id="contato"/>
-            <step id="upload"/>
+            <step id="link"/>
+            <step id="equipamentos"/>
+            <step id="uploadOptional"/>
         </submission-process>
 
+        <!--Esconder ações interset-->
         <submission-process name="Interset">
             <step id="collection"/>
             <step id="interset"/>
             <step id="contato"/>
-            <step id="upload"/>
+            <step id="uploadOptional"/>
         </submission-process>
 
         <submission-process name="Download">
@@ -381,11 +400,11 @@
             <step id="downloadPage"/>
             <step id="upload"/>
         </submission-process>
-<!--        <submission-process name="Story">-->
-<!--            <step id="collection"/>-->
-<!--            <step id="storyStep"/>-->
-<!--            <step id="upload"/>-->
-<!--        </submission-process>-->
+        <!--        <submission-process name="Story">-->
+        <!--            <step id="collection"/>-->
+        <!--            <step id="storyStep"/>-->
+        <!--            <step id="upload"/>-->
+        <!--        </submission-process>-->
 
         <submission-process name="Youtube">
             <step id="collection"/>
