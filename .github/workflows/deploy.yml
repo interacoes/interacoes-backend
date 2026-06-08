@@ -269,5 +269,5 @@ jobs:
               -v /home/interacoes/dspace-solr-postgres/assetstore:/dspaceinstall/assetstore \
               "$IMAGE"
 
-            echo "==> Deploy concluído!"
+            echo "==> Deploy concluído!!"
           REMOTE
