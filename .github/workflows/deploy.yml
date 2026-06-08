@@ -19,7 +19,6 @@ jobs:
     name: Build, Install & Publish Image
     runs-on: ubuntu-latest
 
-    # PostgreSQL local para o ant fresh_install poder conectar
     services:
       postgres:
         image: postgres:15
@@ -37,7 +36,7 @@ jobs:
 
     permissions:
       contents: read
-      packages: write   # necessário para push no GHCR
+      packages: write
 
     steps:
       - name: Checkout do repositório
@@ -131,10 +130,6 @@ jobs:
         run: |
           $DSPACE_INSTALL_DIR/bin/dspace database migrate
 
-      # Copia o resultado do ant fresh_install para dentro do contexto
-      # de build do Docker (COPY só enxerga paths relativos ao contexto)
-      # Sobrescreve local.cfg com configurações de produção APÓS o ant
-      # O ant usou localhost, a imagem Docker usará os containers da rede
       - name: Gerar local.cfg de produção
         run: |
           cat > $DSPACE_INSTALL_DIR/config/local.cfg << EOF
@@ -183,8 +178,6 @@ jobs:
 
       - name: Copiar instalação para contexto do Docker
         run: |
-          # Copia o CONTEÚDO de /dspaceinstall (não a pasta em si)
-          # usando /. no final garante que copia apenas o conteúdo interno
           mkdir -p ./dspace-installed
           cp -R $DSPACE_INSTALL_DIR/. ./dspace-installed/
           echo "==> Verificando estrutura copiada..."
@@ -222,10 +215,11 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-  # ────────────────────────────────────────────
+
+  # ──────────────────────────────────────────────────────────────────────
   # JOB 2: Deploy no servidor remoto
-  # ───────────────────────────────────────────
-deploy:
+  # ──────────────────────────────────────────────────────────────────────
+  deploy:
     name: Deploy no servidor
     runs-on: ubuntu-latest
     needs: build-and-publish
@@ -245,11 +239,7 @@ deploy:
           IMAGE: ghcr.io/${{ env.IMAGE_NAME }}:latest
         run: |
           ssh -o StrictHostKeyChecking=no \
-            "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST_MAIN }}" \
-            GHCR_TOKEN="$GHCR_TOKEN" \
-            GH_ACTOR="$GH_ACTOR" \
-            IMAGE="$IMAGE" \
-            bash << 'REMOTE'
+            "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST_MAIN }}" << REMOTE
             set -e
 
             echo "==> Login no GHCR..."
