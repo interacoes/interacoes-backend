@@ -222,10 +222,9 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-
-  # ──────────────────────────────────────────────────────────────────────
+  # ────────────────────────────────────────────
   # JOB 2: Deploy no servidor remoto
-  # ──────────────────────────────────────────────────────────────────────
+  # ────────────────────────────────────────────
   deploy:
     name: Deploy no servidor
     runs-on: ubuntu-latest
@@ -240,36 +239,35 @@ jobs:
           ssh-keyscan -H "${{ secrets.VPS_HOST_MAIN }}" >> ~/.ssh/known_hosts
 
       - name: Deploy no servidor
+        env:
+          GHCR_TOKEN: ${{ secrets.GHCR_TOKEN }}
+          GHCR_ACTOR: ${{ secrets.GHCR_ACTOR }}
+          IMAGE: ghcr.io/${{ env.IMAGE_NAME }}:latest
         run: |
-          ssh -o StrictHostKeyChecking=no "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST_MAIN }}" bash << 'REMOTE'
+          ssh -o StrictHostKeyChecking=no \
+            "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST_MAIN }}" \
+            GHCR_TOKEN="$GHCR_TOKEN" \
+            GHCR_ACTOR="$GHCR_ACTOR" \
+            IMAGE="$IMAGE" \
+            bash << 'REMOTE'
             set -e
 
-            # Carrega variáveis do .env no servidor
-            set -a
-            source /home/interacoes/dspace-solr-postgres/.env
-            set +a
-
             echo "==> Login no GHCR..."
-            docker login ghcr.io -u "$GHCR_ACTOR" --password "$GHCR_TOKEN"
+            echo "$GHCR_TOKEN" | docker login ghcr.io \
+              -u "$GHCR_ACTOR" --password-stdin
 
-            echo "==> Tags disponíveis no GHCR..."
-            curl -s -u "$GHCR_ACTOR:$GHCR_TOKEN" \
-              "https://ghcr.io/v2/interacoes/dspace-backend/tags/list" || true
-
-            echo "==> IMAGE que será usada: $IMAGE"
-
-            echo "==> Pull da nova imagem..."
+            echo "==> Pull da nova imagem: $IMAGE"
             docker pull "$IMAGE"
 
-            echo "==> Parando container anterior (se existir)..."
+            echo "==> Parando container anterior..."
             docker stop dspace-backend || true
             docker rm   dspace-backend || true
 
             echo "==> Criando rede se não existir..."
             docker network create dspace-net-develop || true
 
-            echo "==> Conectando containers de banco e solr na rede..."
-            docker network connect dspace-net-develop dspace-db || true
+            echo "==> Conectando serviços na rede..."
+            docker network connect dspace-net-develop dspace-db   || true
             docker network connect dspace-net-develop dspace-solr || true
 
             echo "==> Subindo novo container..."
