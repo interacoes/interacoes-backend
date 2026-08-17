@@ -394,6 +394,7 @@
             <step id="collection"/>
             <step id="interset"/>
             <step id="contato"/>
+            <step id="link"/>
             <step id="uploadOptional"/>
         </submission-process>
 
