@@ -52,6 +52,8 @@ public class ItemRest extends DSpaceObjectRest {
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private String entityType = null;
 
+    private boolean hasBitstreams = false;
+
     @Override
     public String getCategory() {
         return CATEGORY;
@@ -106,5 +108,13 @@ public class ItemRest extends DSpaceObjectRest {
 
     public void setEntityType(String entityType) {
         this.entityType = entityType;
+    }
+
+    public boolean getHasBitstreams() {
+        return hasBitstreams;
+    }
+
+    public void setHasBitstreams(boolean hasBitstreams) {
+        this.hasBitstreams = hasBitstreams;
     }
 }

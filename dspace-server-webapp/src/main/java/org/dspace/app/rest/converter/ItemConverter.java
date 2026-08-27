@@ -51,6 +51,7 @@ public class ItemConverter
         item.setDiscoverable(obj.isDiscoverable());
         item.setWithdrawn(obj.isWithdrawn());
         item.setLastModified(obj.getLastModified());
+        item.setHasBitstreams(hasBitstreams(obj));
 
         List<MetadataValue> entityTypes =
             itemService.getMetadata(obj, "dspace", "entity", "type", Item.ANY, false);
@@ -110,5 +111,16 @@ public class ItemConverter
     @Override
     public boolean supportsModel(IndexableObject idxo) {
         return idxo.getIndexedObject() instanceof Item;
+    }
+
+    private boolean hasBitstreams(Item obj) {
+        try {
+            return itemService.getBundles(obj, "ORIGINAL")
+                    .stream()
+                    .anyMatch(bundle -> !bundle.getBitstreams().isEmpty());
+        } catch (SQLException e) {
+            log.error("Error checking bitstreams for item {}", obj.getID(), e);
+            return false;
+        }
     }
 }
