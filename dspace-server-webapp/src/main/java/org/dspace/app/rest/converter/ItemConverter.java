@@ -19,11 +19,10 @@ import org.apache.logging.log4j.Logger;
 import org.dspace.app.rest.model.ItemRest;
 import org.dspace.app.rest.model.MetadataValueList;
 import org.dspace.app.rest.projection.Projection;
-import org.dspace.content.Item;
-import org.dspace.content.MetadataField;
-import org.dspace.content.MetadataValue;
+import org.dspace.content.*;
 import org.dspace.content.service.ItemService;
 import org.dspace.core.Context;
+import org.dspace.curate.Curator;
 import org.dspace.discovery.IndexableObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -51,7 +50,10 @@ public class ItemConverter
         item.setDiscoverable(obj.isDiscoverable());
         item.setWithdrawn(obj.isWithdrawn());
         item.setLastModified(obj.getLastModified());
-        item.setHasBitstreams(hasBitstreams(obj));
+        item.setHasAttachments(hasAttachment(obj));
+        item.setHasImages(hasImage(obj));
+        item.setHasVideos(hasVideo(obj));
+        item.setHasLinks(hasLink(obj));
 
         List<MetadataValue> entityTypes =
             itemService.getMetadata(obj, "dspace", "entity", "type", Item.ANY, false);
@@ -113,14 +115,83 @@ public class ItemConverter
         return idxo.getIndexedObject() instanceof Item;
     }
 
-    private boolean hasBitstreams(Item obj) {
+    private boolean hasAttachment(Item item) {
         try {
-            return itemService.getBundles(obj, "ORIGINAL")
+            Context context = Curator.curationContext();
+
+            return itemService.getBundles(item, "ORIGINAL")
                     .stream()
-                    .anyMatch(bundle -> !bundle.getBitstreams().isEmpty());
+                    .flatMap(bundle -> bundle.getBitstreams().stream())
+                    .anyMatch(bitstream -> {
+                        try {
+                            if (bitstream.getFormat(context) == null
+                                    || bitstream.getFormat(context).getMIMEType() == null) {
+                                return false;
+                            }
+
+                            String mimeType = bitstream.getFormat(context).getMIMEType();
+
+                            return !mimeType.startsWith("image/")
+                                    && !mimeType.startsWith("video/");
+                        } catch (SQLException e) {
+                            return false;
+                        }
+                    });
+
         } catch (SQLException e) {
-            log.error("Error checking bitstreams for item {}", obj.getID(), e);
+            log.error("Error checking attachments for item {}", item.getID(), e);
             return false;
         }
+    }
+
+    private boolean hasImage(Item item) {
+        try {
+            Context context = Curator.curationContext();
+
+            return itemService.getBundles(item, "ORIGINAL")
+                    .stream()
+                    .flatMap(bundle -> bundle.getBitstreams().stream())
+                    .anyMatch(bitstream -> {
+                        try {
+                            return bitstream.getFormat(context) != null
+                                    && bitstream.getFormat(context).getMIMEType() != null
+                                    && bitstream.getFormat(context).getMIMEType().startsWith("image/");
+                        } catch (SQLException e) {
+                            return false;
+                        }
+                    });
+        } catch (SQLException e) {
+            log.error("Error checking images for item {}", item.getID(), e);
+            return false;
+        }
+    }
+
+    private boolean hasVideo(Item item) {
+        try {
+            Context context = Curator.curationContext();
+
+            return itemService.getBundles(item, "ORIGINAL")
+                    .stream()
+                    .flatMap(bundle -> bundle.getBitstreams().stream())
+                    .anyMatch(bitstream -> {
+                        try {
+                            return bitstream.getFormat(context) != null
+                                    && bitstream.getFormat(context).getMIMEType() != null
+                                    && bitstream.getFormat(context).getMIMEType().startsWith("video/");
+                        } catch (SQLException e) {
+                            return false;
+                        }
+                    });
+        } catch (SQLException e) {
+            log.error("Error checking videos for item {}", item.getID(), e);
+            return false;
+        }
+    }
+
+    private boolean hasLink(Item item) {
+        List<MetadataValue> links =
+                itemService.getMetadata(item, "dc", "description", "uri", Item.ANY, false);
+
+        return CollectionUtils.isNotEmpty(links);
     }
 }
