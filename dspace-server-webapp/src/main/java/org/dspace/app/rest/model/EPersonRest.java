@@ -44,6 +44,10 @@ public class EPersonRest extends DSpaceObjectRest {
     @JsonProperty(access = Access.WRITE_ONLY)
     private String password;
 
+    private String funcao;
+
+    private String fullName;
+
     @Override
     @JsonProperty(access = Access.READ_ONLY)
     public String getType() {
@@ -121,4 +125,19 @@ public class EPersonRest extends DSpaceObjectRest {
         return RestResourceController.class;
     }
 
+    public String getFuncao() {
+        return funcao;
+    }
+
+    public void setFuncao(String funcao) {
+        this.funcao = funcao;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
 }
